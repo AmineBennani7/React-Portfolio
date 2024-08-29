@@ -1,0 +1,113 @@
+@import "../../vars.css";
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 49px;
+  margin-left: 10%;
+  margin-right: 10%;
+  z-index: 1;
+}
+
+.heroImg {
+  width: 150px; /* Ajusta según el tamaño deseado */
+  height: 150px; /* Asegura que la imagen tenga el mismo ancho y alto para ser circular */
+  border-radius: 50%; /* Hace que la imagen sea circular */
+  object-fit: cover; /* Ajusta la imagen para cubrir el área sin distorsionarse */
+  object-position: center top; /* Asegura que la parte superior de la imagen se mantenga visible */
+  margin-bottom: 20px; /* Espacio entre la imagen y el contenido */
+  background-color: var(--color-background); /* Asegura que el fondo de la imagen coincida con el fondo del contenedor */
+  z-index: 1;
+}
+
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-text);
+  z-index: 1;
+}
+
+.title {
+  font-size: 2.5rem; /* Ajusta según el tamaño deseado */
+  font-weight: 900;
+  margin-bottom: 10px;
+  font-family: var(--font-roboto);
+  background: linear-gradient(
+    90deg,
+    #1a1a1a 70%,
+    rgba(255, 255, 255, 0) 120%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.description {
+  font-size: 1.2rem; /* Ajusta según el tamaño deseado */
+  font-family: var(--font-roboto);
+  margin-bottom: 20px;
+}
+
+.contactBtn {
+  text-decoration: none;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  border-radius: 100px;
+  font-size: 1.1rem; /* Ajusta según el tamaño deseado */
+  font-weight: 600;
+  padding: 17px 26px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.topBlur {
+  position: absolute;
+  width: 50vw;
+  height: 50vw;
+  min-width: 350px;
+  top: -128px;
+  left: -10vw;
+  border-radius: 764px;
+  background: rgba(25, 55, 109, 0.7);
+  filter: blur(100px);
+  z-index: 0;
+}
+
+.bottomBlur {
+  position: absolute;
+  width: 70vw;
+  height: 50vw;
+  min-width: 250px;
+  top: 246px;
+  right: -25vw;
+  border-radius: 764px;
+  background: rgba(25, 55, 109, 0.7);
+  filter: blur(100px);
+  z-index: 0;
+}
+
+@media screen and (max-width: 830px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .content {
+    align-items: center;
+  }
+}

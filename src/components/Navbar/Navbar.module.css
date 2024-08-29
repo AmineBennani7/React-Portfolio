@@ -1,4 +1,3 @@
-
 @import "../../vars.css";
 
 .navbar {
@@ -9,7 +8,6 @@
   padding-top: 61px;
   z-index: 2;
   margin: 0 10%;
-  
 }
 
 .title {
