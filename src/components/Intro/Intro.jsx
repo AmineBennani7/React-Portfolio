@@ -1,12 +1,12 @@
 import React from "react";
-import styles from "./Hero.module.css";
+import styles from "./Intro.module.css";
 import { getImageUrl } from "../../utils";
 
 export const Hero = () => {
   return (
     <section className={styles.container}>
       <img
-        src={getImageUrl("hero/foto2.png")}
+        src={getImageUrl("User/foto2.png")}
         alt="Amine Image"
         className={styles.heroImg}
       />
