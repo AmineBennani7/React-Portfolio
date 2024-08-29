@@ -11,15 +11,25 @@ export const Hero = () => {
         className={styles.heroImg}
       />
       <div className={styles.content}>
-        <h1 className={styles.title}>Amine Bennani </h1>
+        <h1 className={styles.title}>Amine Bennani</h1>
         <p className={styles.description}>
-          Computer Engineering graduate from the University of Seville,<br />
-          currently pursuing a master's in Artificial Intelligence at Oxford Brookes University.
+          Computer Engineering graduate, currently pursuing a master's<br />
+          in Artificial Intelligence at Oxford Brookes University.
         </p>
 
-        <a href="mailto:myemail@email.com" className={styles.contactBtn}>
-          Contact Me
-        </a>
+        <div className={styles.buttonContainer}>
+          <a href="mailto:aminebenn2000@gmail.com" className={styles.contactBtn}>
+            Contact Me
+          </a>
+          <a 
+            href={getImageUrl("User/CV-amine-ENGL.pdf")} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className={styles.cvBtn}
+          >
+            View My CV
+          </a>
+        </div>
       </div>
       <div className={styles.topBlur} />
       <div className={styles.bottomBlur} />

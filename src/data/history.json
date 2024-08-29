@@ -1,29 +1,40 @@
 [
   {
-    "role": "Software Engineer",
-    "organisation": "Google",
-    "startDate": "Sept, 2022",
+    "role": "Master's in Artificial Intelligence",
+    "organisation": "Oxford Brookes",
+    "startDate": "2024",
     "endDate": "Present",
-    "experiences": ["Worked on Google Maps", "Reduced load times by 50%"],
-    "imageSrc": "history/google.png"
+    "experiences": [],
+    "imageSrc": "history/oxford.png"
   },
   {
-    "role": "UI Designer",
-    "organisation": "Mirosoft",
-    "startDate": "Aug, 2021",
-    "endDate": "Aug, 2022",
-    "experiences": ["Worked on Windows 11", "Designed the control panel"],
-    "imageSrc": "history/microsoft.png"
-  },
-  {
-    "role": "SWE Intern",
-    "organisation": "Netflix",
-    "startDate": "Apr, 2020",
-    "endDate": "Jun, 2020",
+    "role": "Intern Software Engineer",
+    "organisation": "Sopra Steria",
+    "startDate": "Sept, 2023",
+    "endDate": "Feb, 2024",
     "experiences": [
-      "Worked on component library",
-      "Helped create UI components"
+      "Addressed and resolved internal issues to optimize processes.",
+      "Developed projects for international companies using Spring Boot, Spring Security, Spring Batch, Angular, SQL, Power BI, and Git.",
+      "Working languages: Spanish and French."
     ],
-    "imageSrc": "history/netflix.png"
+    "imageSrc": "history/sopra.png"
+  },
+
+  {
+    "role": "Bachelor's Degree in Computer Engineering - Information Technologies",
+    "organisation": "Universidad de Sevilla",
+    "startDate": "2018",
+    "endDate": "2023",
+    "experiences": [
+    ],
+    "imageSrc": "history/us.jpeg"
+  },
+  {
+    "role": "Baccalaureate",
+    "organisation": "Colegio Español de Rabat",
+    "startDate": "2003",
+    "endDate": "2018",
+    "experiences": [],
+    "imageSrc": "history/cer.png"
   }
 ]
