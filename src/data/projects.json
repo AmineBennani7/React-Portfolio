@@ -22,11 +22,12 @@
       "skills": ["Django", "BeautifulSoup", "Whoosh", "SQLite"],
       "source": "https://github.com/AmineBennani7/animalShelter"
     },
-  
+
+
     {
       "title": "Neural Network Projects",
       "imageSrc": "projects/neuron.jpg",
-      "description": "A collection of beginner to intermediate neural network projects for practicing various concepts, including temperature conversion, clothing classification, and image classification with CNNs.",
+      "description": "A collection of 5 beginner to intermediate neural network projects for practicing various concepts, including dense layers, CNNs, data augmentation, dropout, and transfer learning.",
       "skills": ["Neural Networks", "TensorFlow", "Keras", "Data Augmentation", "Image Classification"],
       "source": "https://github.com/AmineBennani7/neural-network-projects"
     },
