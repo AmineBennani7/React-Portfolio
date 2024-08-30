@@ -33,7 +33,7 @@ export const About = () => {
               Machine Learning, as well as the functioning of LLMs and their fine-tuning. My final year project included
               a virtual assistant capable of taking orders for a restaurant
               system. This hands-on experience confirmed my passion for AI and
-              led me to pursue a master's degree.
+              led me to pursue a master's degree about it.
             </p>
           </li>
           <li className={styles.aboutItem}>
