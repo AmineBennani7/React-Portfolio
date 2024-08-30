@@ -4,7 +4,7 @@
     "imageSrc": "projects/bot.jpg",
     "description": "Voice recognition system powered by LLMs allowing to interact with a virtual assistant for placing and managing restaurant orders.",
     "skills": ["ReactJS", "Bootstrap", "Flutter", "Dart", "MongoDB", "Flask", "Langchain"],
-    "Doc": "./assets/docs/TFG.pdf", 
+    "Doc": "/React-Portfolio/assets/docs/TFG.pdf",
     "source": "https://github.com/AmineBennani7/Proyecto-Reconocimiento-Vocal"
   },
   {
@@ -28,7 +28,7 @@
     "imageSrc": "projects/neuron.jpg",
     "description": "A collection of beginner to intermediate neural network projects for practicing various concepts, including temperature conversion, clothing classification, and image classification with CNNs.",
     "skills": ["Neural Networks", "TensorFlow", "Keras", "Data Augmentation", "Image Classification"],
-    "source": "https://github.com/AmineBennani7/neural-network-projectss"
+    "source": "https://github.com/AmineBennani7/neural-network-projects"
   },
 
   {
