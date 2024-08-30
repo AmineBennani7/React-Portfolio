@@ -9,7 +9,7 @@ export const Projects = () => {
       <h2 className={styles.title}>Projects</h2>
       <div className={styles.projects}>
         {projects.map((project, id) => (
-          <ProjectCard key={id} project={project} />
+          <ProjectCard key={id} project={project} isFirstCard={id === 0} />
         ))}
       </div>
     </section>
