@@ -27,7 +27,7 @@ export const ProjectCard = ({
         {/* Render the "Documentation" link only if isFirstCard is true and Doc is provided */}
         {isFirstCard && Doc && (
           <a href={Doc} className={styles.link} target="_blank" rel="noopener noreferrer">
-            Documentation
+            Documentation (Esp)
           </a>
         )}
         <a href={source} className={styles.link}>
