@@ -4,7 +4,7 @@
       "imageSrc": "projects/bot.jpg",
       "description": "Voice recognition system powered by LLMs allowing to interact with a virtual assistant for placing and managing restaurant orders.",
       "skills": ["ReactJS", "Bootstrap", "Flutter", "Dart", "MongoDB", "Flask", "Langchain"],
-      "Doc": "/React-Portfolio/assets/docs/TFG.pdf",
+      "Doc": "https://github.com/AmineBennani7/React-Portfolio/raw/main/assets/docs/TFG.pdf",
       "source": "https://github.com/AmineBennani7/Proyecto-Reconocimiento-Vocal"
     },
     {
