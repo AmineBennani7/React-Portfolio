@@ -1,5 +1,4 @@
 import React from "react";
-
 import styles from "./ProjectCard.module.css";
 import { getImageUrl } from "../../utils";
 
@@ -26,11 +25,16 @@ export const ProjectCard = ({
       <div className={styles.links}>
         {/* Render the "Documentation" link only if isFirstCard is true and Doc is provided */}
         {isFirstCard && Doc && (
-          <a href={Doc} className={styles.link} target="_blank" rel="noopener noreferrer">
+          <a
+            href={Doc}
+            className={styles.link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Documentation (Esp)
           </a>
         )}
-        <a href={source} className={styles.link}>
+        <a href={source} className={styles.link} target="_blank" rel="noopener noreferrer">
           Source
         </a>
       </div>
