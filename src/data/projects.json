@@ -2,7 +2,7 @@
     {
       "title": "Final Year Project: Voice-Based Restaurant Order Assistant",
       "imageSrc": "projects/bot.jpg",
-      "description": "Voice recognition system powered by LLMs allowing to interact with a virtual assistant for placing and managing restaurant orders.",
+      "description": "Voice recognition system powered by LLMs that allows interaction with a virtual assistant for placing and managing restaurant orders. Once the chatbot records the entire order, it sends the order to a React web server for processing..",
       "skills": ["ReactJS", "Bootstrap", "Flutter", "Dart", "MongoDB", "Flask", "Langchain"],
       "Doc": "https://github.com/AmineBennani7/React-Portfolio/raw/main/assets/docs/TFG.pdf",
       "source": "https://github.com/AmineBennani7/Proyecto-Reconocimiento-Vocal"
