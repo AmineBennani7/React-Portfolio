@@ -43,7 +43,7 @@
     {
       "title": "React Portfolio",
       "imageSrc": "projects/portfolio.png",
-      "description": "A personal portfolio built with ReactJS to showcase projects and skills.",
+      "description": "This is the code I developed to create this website using ReactJS, designed to showcase my projects and skills.",
       "skills": ["ReactJS", "JavaScript", "CSS"],
       "source": "https://github.com/AmineBennani7/React-Portfolio"
     }
