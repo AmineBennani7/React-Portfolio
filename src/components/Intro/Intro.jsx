@@ -22,7 +22,7 @@ export const Hero = () => {
             Contact Me
           </a>
           <a 
-            href={getImageUrl("User/CV-amine-ENGL.pdf")} 
+            href={getImageUrl("User/CV Amine 2025.pdf")} 
             target="_blank" 
             rel="noopener noreferrer" 
             className={styles.cvBtn}
