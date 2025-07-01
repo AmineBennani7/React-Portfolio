@@ -14,16 +14,17 @@
 }
 
 .heroImg {
-  width: 150px; 
-  height: 150px; 
+  width: 180px; /* un poco más grande para que la cabeza no quede recortada */
+  height: 180px;
   border-radius: 50%;
-  object-fit: cover; 
-  object-position: center top; 
-  margin-bottom: 20px; 
+  object-fit: cover;
+  object-position: center center;
+  margin-bottom: 20px;
   background-color: var(--color-background);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* mejora el borde */
   z-index: 1;
-  
 }
+
 
 @keyframes floating {
   0% {
