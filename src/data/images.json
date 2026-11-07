@@ -312,12 +312,16 @@
   ]
  },
  "about/headshot": {
-  "w": 340,
-  "h": 425,
+  "w": 982,
+  "h": 1228,
   "sources": [
    [
-    340,
-    "about/headshot-340.webp"
+    720,
+    "about/headshot-720.webp"
+   ],
+   [
+    982,
+    "about/headshot-982.webp"
    ]
   ]
  },
