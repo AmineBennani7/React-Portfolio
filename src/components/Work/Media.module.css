@@ -22,7 +22,7 @@
 
 .cover .img {
   object-fit: cover;
-  object-position: left top;
+  object-position: center;
 }
 
 .contain .img {

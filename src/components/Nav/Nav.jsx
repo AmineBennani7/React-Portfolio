@@ -3,9 +3,10 @@ import { profile } from "../../data/profile";
 import styles from "./Nav.module.css";
 
 const links = [
-  { href: "#work", label: "Projects" },
   { href: "#experience", label: "Experience" },
-  { href: "#about", label: "Skills" },
+  { href: "#education", label: "Education" },
+  { href: "#work", label: "Projects" },
+  { href: "#skills", label: "Skills" },
   { href: "#contact", label: "Contact" },
 ];
 

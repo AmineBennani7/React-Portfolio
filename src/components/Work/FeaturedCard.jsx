@@ -6,18 +6,23 @@ export function FeaturedCard({ project: p, onOpen }) {
   return (
     <li id={`project-${p.slug}`} className={styles.card} data-reveal>
       <article aria-labelledby={`p-${p.slug}`} className={styles.inner}>
-        {p.stats ? (
-          <div className={styles.stats}>
-            <span className={styles.badge}>Team project</span>
-            <dl>
-              {p.stats.map(([value, label]) => (
-                <div key={label}>
-                  <dt>{label}</dt>
-                  <dd>{value}</dd>
-                </div>
+        {p.cardText ? (
+          <button
+            type="button"
+            className={styles.textCard}
+            onClick={() => onOpen(p.slug)}
+            aria-label={`Open the ${p.title} case study`}
+            tabIndex={-1}
+          >
+            <span className={styles.textSteps}>
+              {p.cardText.map((step, k) => (
+                <span key={step}>
+                  {step}
+                  {k < p.cardText.length - 1 && <span className={styles.arrow} aria-hidden="true">→</span>}
+                </span>
               ))}
-            </dl>
-          </div>
+            </span>
+          </button>
         ) : hasCase ? (
           <button
             type="button"
@@ -41,6 +46,15 @@ export function FeaturedCard({ project: p, onOpen }) {
             {p.title}
           </h3>
           <p className={styles.summary}>{p.summary}</p>
+          {p.stats && (
+            <ul className={styles.figures} aria-label="Results">
+              {p.stats.map(([value, label]) => (
+                <li key={label}>
+                  <strong>{value}</strong> {label}
+                </li>
+              ))}
+            </ul>
+          )}
           {p.status && p.status.tone !== "done" && (
             <p className={`${styles.status} ${styles[p.status.tone]}`}>{p.status.label}</p>
           )}

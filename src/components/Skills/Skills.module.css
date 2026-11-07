@@ -2,45 +2,6 @@
   padding-block: clamp(56px, 7vw, 100px);
 }
 
-.education {
-  display: grid;
-  gap: 20px;
-  margin-bottom: clamp(36px, 5vw, 56px);
-}
-
-.education li {
-  display: grid;
-  grid-template-columns: 3.2em minmax(0, 1fr);
-  gap: 12px;
-}
-
-.eduYear {
-  font-size: 14px;
-  color: var(--accent-hi);
-  padding-top: 3px;
-}
-
-.eduMain {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.itemTitle {
-  font-weight: 500;
-  font-size: 17px;
-}
-
-.itemOrg {
-  color: var(--text);
-  font-size: 15px;
-}
-
-.itemNote {
-  color: var(--text-2);
-  font-size: 15px;
-}
-
 .domains {
   display: grid;
   border-top: 1px solid var(--line);

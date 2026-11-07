@@ -1,27 +1,13 @@
-import { education, expertise } from "../../data/profile";
+import { expertise } from "../../data/profile";
 import { SectionHead } from "../ui/SectionHead";
-import styles from "./About.module.css";
+import styles from "./Skills.module.css";
 
-export function About() {
+export function Skills() {
   return (
-    <section id="about" className={styles.section} aria-labelledby="about-title">
+    <section id="skills" className={styles.section} aria-labelledby="skills-title">
       <div className="container">
-        <SectionHead id="about-title" title="Education and skills" />
-
-        <ul className={styles.education} data-reveal>
-          {education.map((e) => (
-            <li key={e.title}>
-              <span className={styles.eduYear}>{e.year}</span>
-              <span className={styles.eduMain}>
-                <span className={styles.itemTitle}>{e.title}</span>
-                <span className={styles.itemOrg}>{e.org}</span>
-                <span className={styles.itemNote}>{e.note}</span>
-              </span>
-            </li>
-          ))}
-        </ul>
-
-        <div className={styles.domains} aria-label="Skills">
+        <SectionHead id="skills-title" title="Skills" />
+        <div className={styles.domains}>
           {expertise.map((d) => (
             <article key={d.domain} className={styles.domain} data-reveal>
               <h3 className={styles.domainName}>{d.domain}</h3>

@@ -311,6 +311,62 @@
    ]
   ]
  },
+ "obr/cones": {
+  "w": 487,
+  "h": 300,
+  "sources": [
+   [
+    487,
+    "obr/cones-487.webp"
+   ]
+  ]
+ },
+ "tennis/system": {
+  "w": 1917,
+  "h": 896,
+  "sources": [
+   [
+    720,
+    "tennis/system-720.webp"
+   ],
+   [
+    1280,
+    "tennis/system-1280.webp"
+   ],
+   [
+    1917,
+    "tennis/system-1917.webp"
+   ]
+  ]
+ },
+ "cozmo/arena": {
+  "w": 378,
+  "h": 236,
+  "sources": [
+   [
+    378,
+    "cozmo/arena-378.webp"
+   ]
+  ]
+ },
+ "voice/app": {
+  "w": 1600,
+  "h": 1000,
+  "sources": [
+   [
+    720,
+    "voice/app-720.webp"
+   ],
+   [
+    1280,
+    "voice/app-1280.webp"
+   ],
+   [
+    1600,
+    "voice/app-1600.webp"
+   ]
+  ]
+ },
  "about/headshot": {
   "w": 982,
   "h": 1228,
@@ -322,76 +378,6 @@
    [
     982,
     "about/headshot-982.webp"
-   ]
-  ]
- },
- "voice/cover": {
-  "w": 1879,
-  "h": 840,
-  "sources": [
-   [
-    720,
-    "voice/cover-720.webp"
-   ],
-   [
-    1280,
-    "voice/cover-1280.webp"
-   ],
-   [
-    1879,
-    "voice/cover-1879.webp"
-   ]
-  ]
- },
- "voice/web-dashboard": {
-  "w": 1902,
-  "h": 832,
-  "sources": [
-   [
-    720,
-    "voice/web-dashboard-720.webp"
-   ],
-   [
-    1280,
-    "voice/web-dashboard-1280.webp"
-   ],
-   [
-    1902,
-    "voice/web-dashboard-1902.webp"
-   ]
-  ]
- },
- "voice/web-menu": {
-  "w": 1327,
-  "h": 768,
-  "sources": [
-   [
-    720,
-    "voice/web-menu-720.webp"
-   ],
-   [
-    1280,
-    "voice/web-menu-1280.webp"
-   ]
-  ]
- },
- "cozmo/localisation-1": {
-  "w": 760,
-  "h": 760,
-  "sources": [
-   [
-    720,
-    "cozmo/localisation-1-720.webp"
-   ]
-  ]
- },
- "cozmo/localisation-2": {
-  "w": 760,
-  "h": 760,
-  "sources": [
-   [
-    720,
-    "cozmo/localisation-2-720.webp"
    ]
   ]
  }

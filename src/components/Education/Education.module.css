@@ -1,0 +1,58 @@
+/* Sits directly under Experience, so it uses the same row rhythm and a smaller top gap. */
+.section {
+  padding-block: clamp(16px, 3vw, 32px) clamp(56px, 7vw, 100px);
+}
+
+.list {
+  border-bottom: 1px solid var(--line);
+}
+
+.item {
+  display: grid;
+  gap: 8px;
+  padding-block: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.year {
+  font-size: 13px;
+  color: var(--text-2);
+  letter-spacing: 0.02em;
+}
+
+.title {
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  font-weight: 520;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+.org {
+  margin-top: 4px;
+  color: var(--text);
+}
+
+.note {
+  color: var(--text-2);
+  max-width: 64ch;
+}
+
+@media (min-width: 1024px) {
+  .item {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: 24px;
+    align-items: start;
+    padding-block: 32px;
+  }
+  .year {
+    grid-column: 1 / span 2;
+    padding-top: 6px;
+  }
+  .main {
+    grid-column: 3 / span 4;
+  }
+  .note {
+    grid-column: 7 / -1;
+    padding-top: 4px;
+  }
+}

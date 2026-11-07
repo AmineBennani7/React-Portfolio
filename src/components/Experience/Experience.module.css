@@ -1,5 +1,5 @@
 .section {
-  padding-block: clamp(56px, 7vw, 100px);
+  padding-block: clamp(56px, 7vw, 100px) clamp(24px, 4vw, 48px);
 }
 
 .timeline {

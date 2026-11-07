@@ -17,6 +17,7 @@ export const experience = [
     period: "Apr 2026 — Present",
     role: "Data & AI Engineer",
     org: "Sword Group Luxembourg",
+    id: "exp-sword",
     context: "Consultant at EBTrans (logistics)",
     summary:
       "I work on Python development, data integration, process automation and AI applications for a logistics company.",
@@ -32,6 +33,7 @@ export const experience = [
     period: "Sep 2024 — Jun 2025",
     role: "AI Engineer, Perception",
     org: "Oxford Brookes Racing Autonomous",
+    id: "exp-obr",
     context: "Formula Student AI team",
     summary: "Member of the perception group for the university's driverless Formula Student car.",
     points: [
@@ -45,6 +47,7 @@ export const experience = [
     period: "Sep 2023 — Apr 2024",
     role: "Software Engineer Intern",
     org: "Sopra Steria",
+    id: "exp-sopra",
     context: "Seville, Spain",
     summary: "Backend and data-processing work for international clients.",
     points: [
@@ -71,57 +74,64 @@ export const education = [
   },
 ];
 
-// Skills grouped by area, each linked to where it was used.
+// Skills grouped by area. Every item is backed by the CV, the current role or a repository;
+// "Used in" points to where it was used.
 export const expertise = [
   {
-    domain: "Python & backend",
-    items: ["Python", "SQL", "Java", "Spring Boot", "FastAPI", "Flask", "REST APIs", "Git", "Docker", "pytest"],
+    domain: "Programming & software engineering",
+    items: ["Python", "SQL", "Java", "C++", "C#", "JavaScript", "TypeScript", "FastAPI", "Flask", "Spring Boot", "REST APIs", "Git", "Docker", "Linux", "pytest"],
     evidence: [
-      { label: "Sword Group", href: "#experience" },
-      { label: "Sopra Steria", href: "#experience" },
-      { label: "GPS Trajectory Analysis", href: "#work/gps" },
-    ],
-  },
-  {
-    domain: "AI & LLMs",
-    items: ["LLM applications", "RAG", "AI agents", "Structured extraction", "OCR", "LangChain"],
-    evidence: [
-      { label: "Sword Group", href: "#experience" },
+      { label: "Sword Group", href: "#exp-sword" },
+      { label: "Sopra Steria", href: "#exp-sopra" },
+      { label: "GPS Trajectory Analysis", href: "#project-gps" },
       { label: "Voice Restaurant Assistant", href: "#project-voice" },
+    ],
+  },
+  {
+    domain: "AI engineering & LLMs",
+    items: ["LLMs", "RAG", "AI agents", "LangChain", "Prompt engineering", "OCR", "Document processing", "Structured extraction", "PyTorch", "TensorFlow"],
+    evidence: [
+      { label: "Sword Group", href: "#exp-sword" },
       { label: "ClairSinistre", href: "#work/clair" },
+      { label: "Voice Restaurant Assistant", href: "#project-voice" },
+      { label: "AI Council", href: "#project-council" },
     ],
   },
   {
-    domain: "Computer vision",
-    items: ["YOLOv8", "OpenCV", "PyTorch", "TensorFlow", "ByteTrack", "GridTrackNet", "Roboflow"],
+    domain: "Computer vision & robotics",
+    items: ["OpenCV", "YOLOv8", "Object detection", "Multi-object tracking", "ByteTrack", "GridTrackNet", "Homography", "Autonomous perception", "Kalman filtering", "Particle filters", "A* path planning", "Cozmo SDK"],
     evidence: [
       { label: "Oxford Brookes Racing", href: "#project-obr" },
-      { label: "Tennis CV System", href: "#work/tennis" },
-    ],
-  },
-  {
-    domain: "Robotics & autonomous systems",
-    items: ["Perception for autonomous driving", "Localisation (Kalman and particle filters)", "A* path planning", "Cozmo SDK"],
-    evidence: [
-      { label: "Oxford Brookes Racing", href: "#project-obr" },
+      { label: "Tennis CV System", href: "#project-tennis" },
       { label: "Cozmo Search & Rescue", href: "#project-cozmo" },
     ],
   },
   {
-    domain: "Data engineering",
-    items: ["PostgreSQL", "PostGIS", "Talend", "ETL", "Apache Airflow", "Spark", "Microsoft Fabric", "Power BI", "AWS QuickSight"],
+    domain: "Data engineering & geospatial",
+    items: ["PostgreSQL", "PostGIS", "Talend", "ETL / ELT", "Apache Airflow", "Pandas", "PySpark", "Delta Lake", "GeoPandas", "MovingPandas", "Shapely", "OSMnx"],
     evidence: [
-      { label: "Sword Group", href: "#experience" },
+      { label: "Sword Group", href: "#exp-sword" },
+      { label: "GPS Trajectory Analysis", href: "#project-gps" },
       { label: "Airflow Pipeline", href: "#work/airflow" },
       { label: "Fabric Analytics", href: "#work/fabric" },
     ],
   },
   {
-    domain: "Automation",
-    items: ["n8n", "Workflow orchestration", "Playwright"],
+    domain: "Cloud & business intelligence",
+    items: ["AWS", "Amazon QuickSight", "Microsoft Fabric", "Power BI", "DAX", "Data warehousing", "Star schema modelling"],
     evidence: [
-      { label: "Sword Group", href: "#experience" },
-      { label: "AI Council", href: "#work/council" },
+      { label: "Sword Group", href: "#exp-sword" },
+      { label: "Fabric Analytics", href: "#work/fabric" },
+      { label: "Sopra Steria", href: "#exp-sopra" },
+    ],
+  },
+  {
+    domain: "Automation & integration",
+    items: ["n8n", "Workflow orchestration", "Webhooks", "AI automation", "Playwright", "CI/CD (GitHub Actions)"],
+    evidence: [
+      { label: "Sword Group", href: "#exp-sword" },
+      { label: "AI Council", href: "#project-council" },
+      { label: "GPS Trajectory Analysis", href: "#project-gps" },
     ],
   },
 ];

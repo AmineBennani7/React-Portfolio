@@ -24,6 +24,7 @@ export const projects = [
     tags: ["Python", "YOLOv8", "OpenCV", "Roboflow"],
     year: "2024–25",
     team: true,
+    cover: { image: "obr/cones", fit: "cover", kind: "On-board camera", caption: "Cone detections from the car's on-board camera." },
     stats: [
       ["3,000+", "training images"],
       ["+15%", "detection precision"],
@@ -113,7 +114,7 @@ export const projects = [
     status: { label: "Complete", tone: "done" },
     year: "2025",
     repo: "https://github.com/AmineBennani7/amateur-tennis-cv-system",
-    cover: { image: "tennis/indoor", fit: "cover", kind: "Model output", caption: "Detector output on an indoor amateur match (from runs/detect in the repository). The ball is detected with low confidence, which shows how hard small, blurred objects are." },
+    cover: { image: "tennis/system", kind: "System output", caption: "System output: tracked players with IDs, ball position, hit counters and a top-down court view (top right)." },
     facts: [
       ["Players", "YOLOv8 + ByteTrack"],
       ["Ball", "GridTrackNet"],
@@ -170,7 +171,7 @@ export const projects = [
     tags: ["Flutter", "Dart", "Python", "Flask", "LangChain", "MongoDB", "React"],
     year: "2024",
     repo: "https://github.com/AmineBennani7/Smart-Voice-Restaurant-Assistant",
-    cover: { image: "voice/cover", kind: "Screenshots", caption: "The mobile voice chatbot and the staff web panel, from the repository." },
+    cover: { image: "voice/app", fit: "cover", kind: "Screenshots", caption: "The mobile voice chatbot (left) and the staff control panel (right), from the repository." },
     links: [{ label: "Report (ES)", href: "/docs/tfg-voice-assistant.pdf", external: true }],
   },
   {
@@ -183,7 +184,8 @@ export const projects = [
     tags: ["Python", "Cozmo SDK", "NumPy", "Kalman filter", "A* planning", "Particle filter"],
     year: "2024",
     repo: "https://github.com/AmineBennani7/search_and_rescue_robotic",
-    cover: { image: "cozmo/localisation-1", fit: "cover", ratio: "1 / 1", kind: "Plot", caption: "Particle-filter localisation run from the earlier assignment: particles, trajectory and estimated robot position." },
+    cover: { image: "cozmo/arena", fit: "cover", kind: "Photo", caption: "Cozmo in one of the physical test arenas, with walls, wall markers and target cubes." },
+    links: [{ label: "Demo video", href: "https://www.youtube.com/watch?v=ZXWCShKqty8", external: true }],
   },
   {
     slug: "council",
@@ -200,6 +202,7 @@ export const projects = [
     repo: "https://github.com/AmineBennani7/ai-council",
     repoPrivate: true,
     cover: { diagram: "council", kind: "Diagram", caption: "V1 workflow for one task started by the user." },
+    cardText: ["Plan", "Build", "Test", "Review", "Commit"],
     facts: [
       ["Started by", "The user, one task per run"],
       ["Planner and reviewer", "Codex CLI"],

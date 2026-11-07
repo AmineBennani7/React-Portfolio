@@ -10,7 +10,7 @@ export function Experience() {
 
         <ol className={styles.timeline}>
           {experience.map((job) => (
-            <li key={job.org} className={styles.row} data-reveal>
+            <li key={job.org} id={job.id} className={styles.row} data-reveal>
               <p className={styles.period}>{job.period}</p>
               <div className={styles.what}>
                 <h3 className={styles.role}>{job.role}</h3>
