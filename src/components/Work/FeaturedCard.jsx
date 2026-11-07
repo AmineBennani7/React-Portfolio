@@ -3,6 +3,7 @@ import styles from "./FeaturedCard.module.css";
 
 export function FeaturedCard({ project: p, onOpen }) {
   const hasCase = Boolean(p.caseStudy);
+  const cover = p.cardCover || p.cover;
   return (
     <li id={`project-${p.slug}`} className={styles.card} data-reveal>
       <article aria-labelledby={`p-${p.slug}`} className={styles.inner}>
@@ -31,10 +32,18 @@ export function FeaturedCard({ project: p, onOpen }) {
             aria-label={`Open the ${p.title} case study`}
             tabIndex={-1}
           >
-            <Media media={p.cover} fit={p.cover.fit || "contain"} ratio="16 / 10" sizes="(min-width: 900px) 46vw, 100vw" showCaption={false} />
+            <Media media={cover} fit={cover.fit || "contain"} ratio="16 / 10" sizes="(min-width: 900px) 46vw, 100vw" showCaption={false} />
           </button>
         ) : (
-          <Media media={p.cover} fit={p.cover.fit || "contain"} ratio="16 / 10" sizes="(min-width: 900px) 46vw, 100vw" showCaption={false} />
+          <Media media={cover} fit={cover.fit || "contain"} ratio="16 / 10" sizes="(min-width: 900px) 46vw, 100vw" showCaption={false} />
+        )}
+
+        {cover.credit && (
+          <p className={styles.credit}>
+            <a href={cover.credit.href} target="_blank" rel="noreferrer">
+              {cover.credit.text}
+            </a>
+          </p>
         )}
 
         <div className={styles.body}>

@@ -367,6 +367,24 @@
    ]
   ]
  },
+ "airflow/terminal": {
+  "w": 3840,
+  "h": 2400,
+  "sources": [
+   [
+    720,
+    "airflow/terminal-720.webp"
+   ],
+   [
+    1280,
+    "airflow/terminal-1280.webp"
+   ],
+   [
+    1920,
+    "airflow/terminal-1920.webp"
+   ]
+  ]
+ },
  "about/headshot": {
   "w": 982,
   "h": 1228,

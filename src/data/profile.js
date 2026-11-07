@@ -91,7 +91,7 @@ export const expertise = [
       { label: "Sword Group", href: "#exp-sword" },
       { label: "ClairSinistre", href: "#work/clair" },
       { label: "Voice Restaurant Assistant", href: "#project-voice" },
-      { label: "AI Council", href: "#project-council" },
+      { label: "AI Council", href: "#work/council" },
     ],
   },
   {
@@ -109,7 +109,7 @@ export const expertise = [
     evidence: [
       { label: "Sword Group", href: "#exp-sword" },
       { label: "GPS Trajectory Analysis", href: "#project-gps" },
-      { label: "Airflow Pipeline", href: "#work/airflow" },
+      { label: "Airflow Pipeline", href: "#project-airflow" },
       { label: "Fabric Analytics", href: "#work/fabric" },
     ],
   },
@@ -127,7 +127,7 @@ export const expertise = [
     items: ["n8n", "Workflow orchestration", "Webhooks", "AI automation", "Playwright", "CI/CD (GitHub Actions)"],
     evidence: [
       { label: "Sword Group", href: "#exp-sword" },
-      { label: "AI Council", href: "#project-council" },
+      { label: "AI Council", href: "#work/council" },
       { label: "GPS Trajectory Analysis", href: "#project-gps" },
     ],
   },

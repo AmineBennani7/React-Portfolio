@@ -11,7 +11,7 @@ export const CATEGORIES = [
 ];
 
 // Order of the featured cards. Everything else appears under "Other projects".
-export const FEATURED = ["obr", "tennis", "gps", "voice", "cozmo", "council"];
+export const FEATURED = ["obr", "tennis", "gps", "voice", "cozmo", "airflow"];
 
 export const projects = [
   {
@@ -253,15 +253,26 @@ export const projects = [
     slug: "airflow",
     index: "04",
     title: "Airflow Logistics Pipeline",
-    discipline: "Data engineering · Orchestration",
+    discipline: "Data Engineering · Python · PostgreSQL",
     categories: ["data"],
     headline: "A daily Apache Airflow pipeline for shipment data.",
     summary:
-      "The pipeline validates shipment records, adds the latest GPS position, estimates the risk of late arrival, calculates delivery and profit KPIs, raises alerts and loads the results into PostgreSQL. It runs in Docker and stops automatically if too many rows fail validation.",
+      "A Python data pipeline built with Apache Airflow that processes logistics and GPS data, validates shipment records, calculates delivery and profitability KPIs, detects potential delays and loads the results into PostgreSQL.",
     tags: ["Python", "Apache Airflow", "Pandas", "PostgreSQL", "Docker"],
     status: { label: "Complete", tone: "done" },
     year: "2026",
     repo: "https://github.com/AmineBennani7/airflow-logistics-pipeline",
+    // Card image is an illustrative photo from Wikimedia Commons (not a screenshot of the project).
+    cardCover: {
+      image: "airflow/terminal",
+      fit: "cover",
+      kind: "Illustrative photo",
+      caption: "Container terminal at night (Hamburg). Illustrative photo, not a screenshot of the project.",
+      credit: {
+        text: "Photo: “Container Terminal Burchardkai night” by mybroetchen, CC BY 2.0, via Wikimedia Commons",
+        href: "https://commons.wikimedia.org/wiki/File:Container_Terminal_Burchardkai_night.jpg",
+      },
+    },
     cover: { image: "airflow/dag-crop", fit: "cover", ratio: "1293 / 708", kind: "Screenshot", caption: "Airflow graph view of the daily_logistics_pipeline DAG (cropped)." },
     facts: [
       ["Orchestration", "Apache Airflow in Docker"],
