@@ -1,0 +1,324 @@
+{
+ "gps/map": {
+  "w": 1960,
+  "h": 1240,
+  "sources": [
+   [
+    720,
+    "gps/map-720.webp"
+   ],
+   [
+    1280,
+    "gps/map-1280.webp"
+   ],
+   [
+    1920,
+    "gps/map-1920.webp"
+   ]
+  ]
+ },
+ "gps/raw-vs-cleaned": {
+  "w": 1960,
+  "h": 1240,
+  "sources": [
+   [
+    720,
+    "gps/raw-vs-cleaned-720.webp"
+   ],
+   [
+    1280,
+    "gps/raw-vs-cleaned-1280.webp"
+   ],
+   [
+    1920,
+    "gps/raw-vs-cleaned-1920.webp"
+   ]
+  ]
+ },
+ "gps/data-quality": {
+  "w": 2248,
+  "h": 1850,
+  "sources": [
+   [
+    720,
+    "gps/data-quality-720.webp"
+   ],
+   [
+    1280,
+    "gps/data-quality-1280.webp"
+   ],
+   [
+    1920,
+    "gps/data-quality-1920.webp"
+   ]
+  ]
+ },
+ "gps/spatial": {
+  "w": 2248,
+  "h": 1548,
+  "sources": [
+   [
+    720,
+    "gps/spatial-720.webp"
+   ],
+   [
+    1280,
+    "gps/spatial-1280.webp"
+   ],
+   [
+    1920,
+    "gps/spatial-1920.webp"
+   ]
+  ]
+ },
+ "gps/movement": {
+  "w": 2248,
+  "h": 1346,
+  "sources": [
+   [
+    720,
+    "gps/movement-720.webp"
+   ],
+   [
+    1280,
+    "gps/movement-1280.webp"
+   ],
+   [
+    1920,
+    "gps/movement-1920.webp"
+   ]
+  ]
+ },
+ "tennis/indoor": {
+  "w": 1920,
+  "h": 1080,
+  "sources": [
+   [
+    720,
+    "tennis/indoor-720.webp"
+   ],
+   [
+    1280,
+    "tennis/indoor-1280.webp"
+   ],
+   [
+    1920,
+    "tennis/indoor-1920.webp"
+   ]
+  ]
+ },
+ "tennis/clay": {
+  "w": 1920,
+  "h": 1080,
+  "sources": [
+   [
+    720,
+    "tennis/clay-720.webp"
+   ],
+   [
+    1280,
+    "tennis/clay-1280.webp"
+   ],
+   [
+    1920,
+    "tennis/clay-1920.webp"
+   ]
+  ]
+ },
+ "airflow/dag": {
+  "w": 1902,
+  "h": 708,
+  "sources": [
+   [
+    720,
+    "airflow/dag-720.webp"
+   ],
+   [
+    1280,
+    "airflow/dag-1280.webp"
+   ],
+   [
+    1902,
+    "airflow/dag-1902.webp"
+   ]
+  ]
+ },
+ "airflow/dag-full": {
+  "w": 1210,
+  "h": 163,
+  "sources": [
+   [
+    720,
+    "airflow/dag-full-720.webp"
+   ],
+   [
+    1210,
+    "airflow/dag-full-1210.webp"
+   ]
+  ]
+ },
+ "airflow/dag-crop": {
+  "w": 1293,
+  "h": 708,
+  "sources": [
+   [
+    720,
+    "airflow/dag-crop-720.webp"
+   ],
+   [
+    1280,
+    "airflow/dag-crop-1280.webp"
+   ]
+  ]
+ },
+ "airflow/postgres": {
+  "w": 1905,
+  "h": 905,
+  "sources": [
+   [
+    720,
+    "airflow/postgres-720.webp"
+   ],
+   [
+    1280,
+    "airflow/postgres-1280.webp"
+   ],
+   [
+    1905,
+    "airflow/postgres-1905.webp"
+   ]
+  ]
+ },
+ "airflow/docker": {
+  "w": 1903,
+  "h": 1038,
+  "sources": [
+   [
+    720,
+    "airflow/docker-720.webp"
+   ],
+   [
+    1280,
+    "airflow/docker-1280.webp"
+   ],
+   [
+    1903,
+    "airflow/docker-1903.webp"
+   ]
+  ]
+ },
+ "airflow/processed": {
+  "w": 1368,
+  "h": 253,
+  "sources": [
+   [
+    720,
+    "airflow/processed-720.webp"
+   ],
+   [
+    1280,
+    "airflow/processed-1280.webp"
+   ]
+  ]
+ },
+ "fabric/executive": {
+  "w": 1222,
+  "h": 702,
+  "sources": [
+   [
+    720,
+    "fabric/executive-720.webp"
+   ],
+   [
+    1222,
+    "fabric/executive-1222.webp"
+   ]
+  ]
+ },
+ "fabric/time": {
+  "w": 1215,
+  "h": 712,
+  "sources": [
+   [
+    720,
+    "fabric/time-720.webp"
+   ],
+   [
+    1215,
+    "fabric/time-1215.webp"
+   ]
+  ]
+ },
+ "fabric/star-schema": {
+  "w": 748,
+  "h": 321,
+  "sources": [
+   [
+    720,
+    "fabric/star-schema-720.webp"
+   ]
+  ]
+ },
+ "fabric/pipeline": {
+  "w": 1295,
+  "h": 387,
+  "sources": [
+   [
+    720,
+    "fabric/pipeline-720.webp"
+   ],
+   [
+    1280,
+    "fabric/pipeline-1280.webp"
+   ]
+  ]
+ },
+ "fabric/scd": {
+  "w": 535,
+  "h": 602,
+  "sources": [
+   [
+    535,
+    "fabric/scd-535.webp"
+   ]
+  ]
+ },
+ "council/home-desktop": {
+  "w": 1440,
+  "h": 300,
+  "sources": [
+   [
+    720,
+    "council/home-desktop-720.webp"
+   ],
+   [
+    1280,
+    "council/home-desktop-1280.webp"
+   ],
+   [
+    1440,
+    "council/home-desktop-1440.webp"
+   ]
+  ]
+ },
+ "council/filter-mobile": {
+  "w": 390,
+  "h": 844,
+  "sources": [
+   [
+    390,
+    "council/filter-mobile-390.webp"
+   ]
+  ]
+ },
+ "about/portrait": {
+  "w": 680,
+  "h": 830,
+  "sources": [
+   [
+    680,
+    "about/portrait-680.webp"
+   ]
+  ]
+ }
+}
