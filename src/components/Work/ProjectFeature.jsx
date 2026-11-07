@@ -24,13 +24,12 @@ export function ProjectFeature({ project: p, flip, onOpen }) {
             </span>
           </button>
           <p className={styles.caption}>
-            <span className={styles.kind}>{p.cover.kind}</span> {p.cover.caption}
+            {p.cover.caption}
           </p>
         </div>
 
         <div className={styles.body}>
           <div className={styles.topline}>
-            <span className={styles.index}>{p.index}</span>
             <span className={styles.discipline}>{p.discipline}</span>
             <span className={styles.year}>{p.year}</span>
           </div>

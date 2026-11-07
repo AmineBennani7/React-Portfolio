@@ -1,5 +1,5 @@
 .section {
-  padding-block: clamp(64px, 9vw, 128px) 0;
+  padding-block: clamp(56px, 7vw, 100px) 0;
 }
 
 .toolbar {

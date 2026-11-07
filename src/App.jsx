@@ -12,15 +12,15 @@ export default function App() {
   return (
     <>
       <a className="skip-link" href="#work">
-        Skip to selected work
+        Skip to projects
       </a>
       <Nav />
       <main id="top">
         <Hero />
         <Work />
+        <Archive />
         <Experience />
         <About />
-        <Archive />
       </main>
       <Contact />
     </>

@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Media } from "./Media";
 import { Pipeline } from "./Pipeline";
+import { TrajectoryField } from "./TrajectoryField";
 import styles from "./CaseStudy.module.css";
 
 /**
@@ -52,9 +53,7 @@ export function CaseStudy({ project, onClose }) {
         <article className={styles.sheet}>
           <header className={styles.header}>
             <div className={styles.headerBar}>
-              <span className={styles.crumb}>
-                <span className={styles.index}>{p.index}</span> Case study
-              </span>
+              <span className={styles.crumb}>Case study</span>
               <button type="button" className={styles.close} onClick={() => ref.current.close()}>
                 Close <span aria-hidden="true">✕</span>
               </button>
@@ -93,15 +92,21 @@ export function CaseStudy({ project, onClose }) {
             eager
           />
 
-          <Block n="01" title="Problem">
+          {cs.replay && (
+            <div className={styles.replay}>
+              <TrajectoryField />
+            </div>
+          )}
+
+          <Block title="Problem">
             <p className={styles.lead}>{cs.problem}</p>
           </Block>
 
-          <Block n="02" title="Architecture">
+          <Block title="Architecture">
             <Pipeline steps={cs.architecture} label={`${p.title} architecture stages`} />
           </Block>
 
-          <Block n="03" title="Implementation">
+          <Block title="Implementation">
             <ul className={styles.bullets}>
               {cs.implementation.map((t) => (
                 <li key={t}>{t}</li>
@@ -109,7 +114,7 @@ export function CaseStudy({ project, onClose }) {
             </ul>
           </Block>
 
-          <Block n="04" title="Tools and components">
+          <Block title="Tools and components">
             <table className={styles.table}>
               <thead>
                 <tr>
@@ -128,7 +133,7 @@ export function CaseStudy({ project, onClose }) {
             </table>
           </Block>
 
-          <Block n="05" title="Results">
+          <Block title="Results">
             <ul className={`${styles.bullets} ${styles.results}`}>
               {cs.results.map((t) => (
                 <li key={t}>{t}</li>
@@ -137,7 +142,7 @@ export function CaseStudy({ project, onClose }) {
             {cs.resultsNote && <p className={styles.note}>{cs.resultsNote}</p>}
           </Block>
 
-          <Block n="06" title="Limitations">
+          <Block title="Limitations">
             <ul className={`${styles.bullets} ${styles.limits}`}>
               {cs.limitations.map((t) => (
                 <li key={t}>{t}</li>
@@ -146,7 +151,7 @@ export function CaseStudy({ project, onClose }) {
           </Block>
 
           {cs.gallery.length > 0 && (
-            <Block n="07" title="Evidence">
+            <Block title="Evidence">
               <div className={styles.gallery}>
                 {cs.gallery.map((g) => (
                   <Media key={g.image} media={g} sizes="(min-width: 1100px) 500px, 100vw" />
@@ -169,11 +174,10 @@ export function CaseStudy({ project, onClose }) {
   );
 }
 
-function Block({ n, title, children }) {
+function Block({ title, children }) {
   return (
     <section className={styles.block}>
       <h3 className={styles.blockTitle}>
-        <span className={styles.blockNum}>{n}</span>
         {title}
       </h3>
       <div className={styles.blockBody}>{children}</div>

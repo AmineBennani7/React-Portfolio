@@ -140,7 +140,7 @@ button {
 
 .skip-link {
   position: fixed;
-  top: 12px;
+  top: -100px;
   left: 12px;
   z-index: 100;
   padding: 10px 16px;
@@ -148,10 +148,9 @@ button {
   color: var(--bg);
   font-weight: 600;
   border-radius: var(--radius);
-  transform: translateY(-200%);
 }
 .skip-link:focus {
-  transform: none;
+  top: 12px;
 }
 
 .mono {

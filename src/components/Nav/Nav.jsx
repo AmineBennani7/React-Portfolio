@@ -3,7 +3,7 @@ import { profile } from "../../data/profile";
 import styles from "./Nav.module.css";
 
 const links = [
-  { href: "#work", label: "Work" },
+  { href: "#work", label: "Projects" },
   { href: "#experience", label: "Experience" },
   { href: "#about", label: "About" },
   { href: "#contact", label: "Contact" },
@@ -79,9 +79,6 @@ export function Nav() {
                   aria-current={active === l.href.slice(1) ? "true" : undefined}
                   onClick={() => setOpen(false)}
                 >
-                  <span className={styles.num} aria-hidden="true">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
                   {l.label}
                 </a>
               </li>

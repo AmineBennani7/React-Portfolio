@@ -1,21 +1,9 @@
 .footer {
   position: relative;
-  padding-top: clamp(72px, 10vw, 150px);
+  padding-top: clamp(56px, 7vw, 100px);
   padding-bottom: 28px;
   border-top: 1px solid var(--line);
   overflow: hidden;
-}
-
-.footer::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -40vmax;
-  width: 90vmax;
-  height: 60vmax;
-  transform: translateX(-50%);
-  background: radial-gradient(closest-side, rgba(93, 139, 255, 0.12), transparent 70%);
-  pointer-events: none;
 }
 
 .footer > :global(.container) {
@@ -36,9 +24,9 @@
 }
 
 .title {
-  margin-top: 20px;
-  font-size: clamp(2.8rem, 9vw, 7.5rem);
-  line-height: 0.92;
+  margin-top: 0;
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  line-height: 1;
   letter-spacing: -0.05em;
   font-weight: 540;
   max-width: 16ch;

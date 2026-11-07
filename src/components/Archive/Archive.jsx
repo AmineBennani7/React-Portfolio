@@ -7,11 +7,9 @@ export function Archive() {
       <div className="container">
         <div className={styles.head} data-reveal>
           <h2 id="archive-title" className={styles.title}>
-            <span className={styles.index}>04</span> Archive
+            Earlier projects
           </h2>
-          <p className={styles.note}>
-            Earlier academic and personal projects.
-          </p>
+          <p className={styles.note}>Smaller university and personal projects.</p>
         </div>
 
         <ul className={styles.list}>

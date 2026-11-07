@@ -20,14 +20,11 @@ export function Contact() {
   return (
     <footer id="contact" className={styles.footer} aria-labelledby="contact-title">
       <div className="container">
-        <p className={styles.label} data-reveal>
-          <span className={styles.index}>05</span> Contact
-        </p>
         <h2 id="contact-title" className={styles.title} data-reveal>
-          Get in <span className="serif">touch.</span>
+          Contact
         </h2>
         <p className={styles.intro} data-reveal>
-          For roles, projects or questions about my work, email is the best way to reach me.
+          The easiest way to reach me is by email. I&apos;m also on LinkedIn and GitHub.
         </p>
 
         <div className={styles.emailRow} data-reveal>
@@ -76,10 +73,7 @@ export function Contact() {
 
         <div className={styles.base}>
           <p>© {new Date().getFullYear()} {profile.name}</p>
-          <p>
-            Built with React and Vite. Hero data: synthetic GPS fleet from{" "}
-            <a href="#work/gps">GPS Trajectory Analysis</a>.
-          </p>
+          <p>Built with React and Vite.</p>
           <a href="#top" className={styles.top}>
             Back to top <span aria-hidden="true">↑</span>
           </a>

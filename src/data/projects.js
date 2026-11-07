@@ -31,6 +31,7 @@ export const projects = [
       ["Testing", "pytest and Ruff"],
     ],
     caseStudy: {
+      replay: true,
       problem:
         "Raw GPS data contains missing timestamps, (0, 0) coordinates, duplicates, inaccurate fixes and sudden jumps of several kilometres. If it is used as is, distances and speeds are wrong. I wanted a pipeline that cleans the data, records why each point was rejected, and then runs useful trajectory and spatial analysis on the result.",
       architecture: [

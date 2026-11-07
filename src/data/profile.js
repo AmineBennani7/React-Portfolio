@@ -59,14 +59,21 @@ export const education = [
     year: "2025",
     title: "MSc Artificial Intelligence",
     org: "Oxford Brookes University",
-    note: "Distinction. Dissertation on detecting and tracking small, fast-moving objects under motion blur.",
+    note: "Distinction. Dissertation on tracking small, fast-moving objects under motion blur.",
   },
   {
     year: "2024",
     title: "BSc Computer Engineering",
     org: "University of Seville",
-    note: "Information Technologies.",
+    note: "Information Technologies, Seville, Spain.",
   },
+];
+
+export const languages = [
+  { name: "French", level: "fluent" },
+  { name: "Spanish", level: "fluent" },
+  { name: "English", level: "fluent" },
+  { name: "Arabic", level: "conversational" },
 ];
 
 // Each domain links to related work.

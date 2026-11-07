@@ -1,5 +1,5 @@
 .section {
-  padding-block: clamp(64px, 8vw, 120px);
+  padding-block: clamp(56px, 7vw, 100px);
 }
 
 .timeline {
@@ -29,24 +29,6 @@
 }
 .row:hover::after {
   transform: scaleX(1);
-}
-
-.when {
-  display: flex;
-  align-items: baseline;
-  gap: 14px;
-}
-
-.year {
-  font-size: clamp(2.2rem, 5vw, 4rem);
-  font-weight: 500;
-  letter-spacing: -0.05em;
-  line-height: 0.9;
-  color: var(--text-3);
-  transition: color 0.4s;
-}
-.row:hover .year {
-  color: var(--text);
 }
 
 .period {
@@ -100,10 +82,9 @@
     padding-block: 40px;
     align-items: start;
   }
-  .when {
+  .period {
     grid-column: 1 / span 3;
-    flex-direction: column;
-    gap: 10px;
+    padding-top: 6px;
   }
   .what {
     grid-column: 4 / span 4;

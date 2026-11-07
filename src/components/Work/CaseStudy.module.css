@@ -179,6 +179,15 @@
   margin-top: 40px;
 }
 
+.replay {
+  height: clamp(380px, 62vw, 540px);
+  margin-top: 40px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--bg-raised);
+}
+
 .block {
   display: grid;
   gap: 16px;

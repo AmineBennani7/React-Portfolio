@@ -73,10 +73,9 @@
 }
 
 .caption {
-  padding-top: 14px;
-  max-width: 46ch;
-  margin-left: auto;
-  font-size: 12.5px;
+  padding-top: 12px;
+  max-width: 70ch;
+  font-size: 13px;
   line-height: 1.5;
   color: var(--text-3);
 }
@@ -91,13 +90,4 @@
 .caption a:hover {
   color: var(--text);
   text-decoration-color: var(--accent);
-}
-
-.figNo {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--accent-hi);
-  margin-right: 10px;
 }

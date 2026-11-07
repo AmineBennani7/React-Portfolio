@@ -45,19 +45,7 @@ export function Work() {
   return (
     <section id="work" className={styles.section} aria-labelledby="work-title">
       <div className="container">
-        <SectionHead
-          id="work-title"
-          index="01"
-          label="Selected work"
-          title={
-            <>
-              Projects in AI, vision <span className="serif">and data.</span>
-            </>
-          }
-        >
-          Six recent projects. Each case study explains the problem, the architecture, how I built it and the
-          results.
-        </SectionHead>
+        <SectionHead id="work-title" title="Projects" />
 
         <div className={styles.toolbar} data-reveal>
           <div className={styles.filters} role="group" aria-label="Filter projects by discipline">
@@ -78,8 +66,8 @@ export function Work() {
               );
             })}
           </div>
-          <p className={styles.status} aria-live="polite">
-            Showing {String(visible.length).padStart(2, "0")} / {String(projects.length).padStart(2, "0")}
+          <p className="visually-hidden" aria-live="polite">
+            Showing {visible.length} of {projects.length} projects
           </p>
         </div>
 

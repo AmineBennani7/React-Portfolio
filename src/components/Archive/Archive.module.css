@@ -1,5 +1,5 @@
 .section {
-  padding-block: clamp(60px, 8vw, 120px);
+  padding-block: clamp(24px, 4vw, 48px) clamp(56px, 7vw, 100px);
 }
 
 .head {
@@ -13,7 +13,7 @@
 }
 
 .title {
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-size: clamp(1.4rem, 2.6vw, 1.9rem);
   font-weight: 520;
   letter-spacing: -0.04em;
 }

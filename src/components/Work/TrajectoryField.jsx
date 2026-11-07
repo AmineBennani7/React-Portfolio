@@ -315,7 +315,7 @@ export function TrajectoryField() {
     const onVisibility = () => (document.hidden ? stopLoop() : startLoop());
     document.addEventListener("visibilitychange", onVisibility);
 
-    const target = wrap.closest("section") || wrap;
+    const target = wrap.parentElement || wrap;
     target.addEventListener("pointermove", onPointerMove);
     target.addEventListener("pointerleave", onPointerLeave);
 
@@ -365,10 +365,8 @@ export function TrajectoryField() {
         </dl>
       </div>
       <figcaption className={styles.caption}>
-        <span className={styles.figNo}>Fig. 01</span>
-        Fleet trajectories replayed from my{" "}
-        <a href="#work/gps">GPS Trajectory Analysis</a> project (synthetic data, Seville). Move the
-        cursor, or drag on touch screens, to probe fixes and geofences.
+        The four cleaned trajectories from the sample data, replayed. Move the cursor (or drag on a touch screen) to
+        count the GPS points within 180 m and see which geofence you are in.
       </figcaption>
     </figure>
   );
