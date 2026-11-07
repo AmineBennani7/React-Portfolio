@@ -311,13 +311,83 @@
    ]
   ]
  },
- "about/portrait": {
-  "w": 680,
-  "h": 830,
+ "about/headshot": {
+  "w": 340,
+  "h": 425,
   "sources": [
    [
-    680,
-    "about/portrait-680.webp"
+    340,
+    "about/headshot-340.webp"
+   ]
+  ]
+ },
+ "voice/cover": {
+  "w": 1879,
+  "h": 840,
+  "sources": [
+   [
+    720,
+    "voice/cover-720.webp"
+   ],
+   [
+    1280,
+    "voice/cover-1280.webp"
+   ],
+   [
+    1879,
+    "voice/cover-1879.webp"
+   ]
+  ]
+ },
+ "voice/web-dashboard": {
+  "w": 1902,
+  "h": 832,
+  "sources": [
+   [
+    720,
+    "voice/web-dashboard-720.webp"
+   ],
+   [
+    1280,
+    "voice/web-dashboard-1280.webp"
+   ],
+   [
+    1902,
+    "voice/web-dashboard-1902.webp"
+   ]
+  ]
+ },
+ "voice/web-menu": {
+  "w": 1327,
+  "h": 768,
+  "sources": [
+   [
+    720,
+    "voice/web-menu-720.webp"
+   ],
+   [
+    1280,
+    "voice/web-menu-1280.webp"
+   ]
+  ]
+ },
+ "cozmo/localisation-1": {
+  "w": 760,
+  "h": 760,
+  "sources": [
+   [
+    720,
+    "cozmo/localisation-1-720.webp"
+   ]
+  ]
+ },
+ "cozmo/localisation-2": {
+  "w": 760,
+  "h": 760,
+  "sources": [
+   [
+    720,
+    "cozmo/localisation-2-720.webp"
    ]
   ]
  }

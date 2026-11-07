@@ -1,5 +1,4 @@
 import { About } from "./components/About/About";
-import { Archive } from "./components/Archive/Archive";
 import { Contact } from "./components/Contact/Contact";
 import { Experience } from "./components/Experience/Experience";
 import { Hero } from "./components/Hero/Hero";
@@ -18,7 +17,6 @@ export default function App() {
       <main id="top">
         <Hero />
         <Work />
-        <Archive />
         <Experience />
         <About />
       </main>

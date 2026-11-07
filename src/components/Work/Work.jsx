@@ -1,25 +1,47 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { CATEGORIES, projects } from "../../data/projects";
+import { archive } from "../../data/profile";
+import { CATEGORIES, FEATURED, projects } from "../../data/projects";
 import { SectionHead } from "../ui/SectionHead";
 import { CaseStudy } from "./CaseStudy";
-import { ProjectFeature } from "./ProjectFeature";
+import { FeaturedCard } from "./FeaturedCard";
+import { OtherProjects } from "./OtherProjects";
 import styles from "./Work.module.css";
+
+const bySlug = Object.fromEntries(projects.map((p) => [p.slug, p]));
+const featured = FEATURED.map((slug) => bySlug[slug]);
+
+// Projects with a case study that are not featured, followed by the smaller ones.
+const others = [
+  ...projects
+    .filter((p) => !FEATURED.includes(p.slug))
+    .map((p) => ({
+      slug: p.slug,
+      year: p.year,
+      title: p.title,
+      note: p.headline,
+      stack: p.tags.slice(0, 4).join(" · "),
+      href: p.repo,
+      repoPrivate: p.repoPrivate,
+      categories: p.categories,
+    })),
+  ...archive,
+];
 
 const slugFromHash = () => {
   const m = window.location.hash.match(/^#work\/([\w-]+)$/);
-  return m && projects.some((p) => p.slug === m[1]) ? m[1] : null;
+  return m && bySlug[m[1]]?.caseStudy ? m[1] : null;
 };
+
+const matches = (filter) => (item) => filter === "all" || item.categories.includes(filter);
 
 export function Work() {
   const [filter, setFilter] = useState("all");
   const [openSlug, setOpenSlug] = useState(null);
 
-  const visible = useMemo(
-    () => (filter === "all" ? projects : projects.filter((p) => p.categories.includes(filter))),
-    [filter],
-  );
+  const visibleFeatured = useMemo(() => featured.filter(matches(filter)), [filter]);
+  const visibleOthers = useMemo(() => others.filter(matches(filter)), [filter]);
 
-  // Deep links: #work/<slug> opens the case study (also used by the expertise section).
+  // Deep links: #work/<slug> opens the case study.
   useEffect(() => {
     const sync = () => {
       const slug = slugFromHash();
@@ -40,7 +62,8 @@ export function Work() {
     setOpenSlug(null);
   }, []);
 
-  const current = projects.find((p) => p.slug === openSlug) || null;
+  const current = openSlug ? bySlug[openSlug] : null;
+  const total = featured.length + others.length;
 
   return (
     <section id="work" className={styles.section} aria-labelledby="work-title">
@@ -48,10 +71,9 @@ export function Work() {
         <SectionHead id="work-title" title="Projects" />
 
         <div className={styles.toolbar} data-reveal>
-          <div className={styles.filters} role="group" aria-label="Filter projects by discipline">
+          <div className={styles.filters} role="group" aria-label="Filter projects by field">
             {CATEGORIES.map((c) => {
-              const count =
-                c.id === "all" ? projects.length : projects.filter((p) => p.categories.includes(c.id)).length;
+              const count = c.id === "all" ? total : [...featured, ...others].filter(matches(c.id)).length;
               return (
                 <button
                   key={c.id}
@@ -67,15 +89,19 @@ export function Work() {
             })}
           </div>
           <p className="visually-hidden" aria-live="polite">
-            Showing {visible.length} of {projects.length} projects
+            Showing {visibleFeatured.length + visibleOthers.length} of {total} projects
           </p>
         </div>
 
-        <ol className={styles.list}>
-          {visible.map((p, i) => (
-            <ProjectFeature key={p.slug} project={p} flip={i % 2 === 1} onOpen={open} eager={false} />
-          ))}
-        </ol>
+        {visibleFeatured.length > 0 && (
+          <ul className={styles.grid}>
+            {visibleFeatured.map((p) => (
+              <FeaturedCard key={p.slug} project={p} onOpen={open} />
+            ))}
+          </ul>
+        )}
+
+        <OtherProjects items={visibleOthers} onOpen={open} />
       </div>
 
       <CaseStudy project={current} onClose={close} />

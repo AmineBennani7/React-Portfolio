@@ -21,6 +21,13 @@ export function Experience() {
               </div>
               <div className={styles.detail}>
                 <p>{job.summary}</p>
+                {job.points && (
+                  <ul className={styles.points}>
+                    {job.points.map((pt) => (
+                      <li key={pt}>{pt}</li>
+                    ))}
+                  </ul>
+                )}
                 <ul className={styles.tags} aria-label="Tools">
                   {job.tags.map((t) => (
                     <li key={t}>{t}</li>

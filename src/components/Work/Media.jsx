@@ -7,13 +7,13 @@ const diagrams = { council: CouncilDiagram, clair: ClairDiagram };
 /**
  * Project visual: a real image or a conceptual diagram, always labelled with what it is.
  */
-export function Media({ media, sizes, fit = "contain", className = "", eager = false, showCaption = true }) {
+export function Media({ media, sizes, fit = "contain", ratio, className = "", eager = false, showCaption = true }) {
   const Diagram = media.diagram ? diagrams[media.diagram] : null;
   return (
     <figure className={`${styles.media} ${className}`}>
       <div
         className={`${styles.frame} ${styles[fit]} ${Diagram ? styles.isDiagram : ""}`}
-        style={media.ratio ? { aspectRatio: media.ratio } : undefined}
+        style={ratio || media.ratio ? { aspectRatio: ratio || media.ratio } : undefined}
       >
         {Diagram ? (
           <Diagram />

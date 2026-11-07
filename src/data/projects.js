@@ -4,12 +4,34 @@
 export const CATEGORIES = [
   { id: "all", label: "All" },
   { id: "cv", label: "Computer Vision" },
-  { id: "data", label: "Data Engineering" },
-  { id: "ai", label: "AI Systems" },
+  { id: "robotics", label: "Robotics" },
+  { id: "ai", label: "AI & LLMs" },
+  { id: "data", label: "Data" },
   { id: "software", label: "Software" },
 ];
 
+// Order of the featured cards. Everything else appears under "Other projects".
+export const FEATURED = ["obr", "tennis", "gps", "voice", "cozmo", "council"];
+
 export const projects = [
+  {
+    slug: "obr",
+    title: "Oxford Brookes Racing Autonomous",
+    discipline: "Formula Student AI · Team project",
+    categories: ["cv", "robotics"],
+    summary:
+      "Perception for the team's driverless Formula Student car. Within the perception group, I worked on YOLOv8 cone detection and tracking, from building the training data to making the model faster on the car.",
+    tags: ["Python", "YOLOv8", "OpenCV", "Roboflow"],
+    year: "2024–25",
+    team: true,
+    stats: [
+      ["3,000+", "training images"],
+      ["+15%", "detection precision"],
+      ["22 → 30", "FPS"],
+      ["2nd", "Formula Student UK AI (team)"],
+    ],
+    links: [{ label: "Experience details", href: "#experience" }],
+  },
   {
     slug: "gps",
     index: "01",
@@ -18,7 +40,7 @@ export const projects = [
     categories: ["data", "software"],
     headline: "Cleaning and analysing vehicle GPS tracks.",
     summary:
-      "A Python and Streamlit application that cleans raw GPS data, builds a trajectory for each vehicle and detects stops, journeys, geofence events, frequently visited places and unusual speeds. Results can be stored in PostGIS or exported as CSV and GeoJSON.",
+      "A Python application that cleans raw vehicle GPS data and finds stops, journeys, geofence events and unusual speeds. It stores results in PostGIS, runs in Docker and is covered by automated tests.",
     tags: ["Python", "MovingPandas", "GeoPandas", "Shapely", "PostGIS", "scikit-learn", "Streamlit", "Docker", "pytest"],
     status: { label: "Complete", tone: "done" },
     year: "2026",
@@ -82,11 +104,11 @@ export const projects = [
     slug: "tennis",
     index: "02",
     title: "Amateur Tennis CV System",
-    discipline: "Computer vision · Object tracking",
+    discipline: "Computer vision · MSc dissertation",
     categories: ["cv", "ai"],
     headline: "Player and ball tracking for amateur tennis video.",
     summary:
-      "A computer vision pipeline that tracks players with YOLOv8 and ByteTrack, tracks the ball with GridTrackNet, maps positions onto the court with a homography and produces an annotated video with a minimap and hit counts for each player.",
+      "My MSc dissertation: a pipeline that tracks players with YOLOv8 and ByteTrack and a small, fast ball with GridTrackNet, maps everything onto the court with a homography, and outputs an annotated video with a minimap and hit counts.",
     tags: ["Python", "YOLOv8", "ByteTrack", "GridTrackNet", "OpenCV", "TensorFlow", "PyTorch", "Homography", "MOT metrics"],
     status: { label: "Complete", tone: "done" },
     year: "2025",
@@ -100,7 +122,7 @@ export const projects = [
     ],
     caseStudy: {
       problem:
-        "Professional tennis analytics use several calibrated cameras. Amateur matches are usually filmed with a single fixed camera, and the ball is only a few pixels wide and often blurred. The goal was to get useful match data from that single view: player positions, the ball's path and hits per player.",
+        "This was my MSc dissertation project at Oxford Brookes. Professional tennis analytics use several calibrated cameras. Amateur matches are usually filmed with a single fixed camera, and the ball is only a few pixels wide and often blurred. The goal was to get useful match data from that single view: player positions, the ball's path and hits per player.",
       architecture: [
         { label: "Video", detail: "Frames read in batches with OpenCV" },
         { label: "Players", detail: "YOLOv8 detector with ByteTrack IDs" },
@@ -139,6 +161,31 @@ export const projects = [
     },
   },
   {
+    slug: "voice",
+    title: "Smart Voice Restaurant Assistant",
+    discipline: "Final-year project · University of Seville",
+    categories: ["ai", "software"],
+    summary:
+      "A Flutter app where customers order food by talking to a chatbot. The assistant uses LangChain and GPT-4 to answer questions about the menu and record the order, which is sent to a React web panel used by restaurant staff.",
+    tags: ["Flutter", "Dart", "Python", "Flask", "LangChain", "MongoDB", "React"],
+    year: "2024",
+    repo: "https://github.com/AmineBennani7/Smart-Voice-Restaurant-Assistant",
+    cover: { image: "voice/cover", kind: "Screenshots", caption: "The mobile voice chatbot and the staff web panel, from the repository." },
+    links: [{ label: "Report (ES)", href: "/docs/tfg-voice-assistant.pdf", external: true }],
+  },
+  {
+    slug: "cozmo",
+    title: "Cozmo Search & Rescue",
+    discipline: "Robotics · MSc coursework",
+    categories: ["robotics"],
+    summary:
+      "Programs for an Anki Cozmo robot. The robot explores an arena, tracks its pose with a Kalman-filter update from wall markers, avoids cliffs, picks up cubes and carries them to a target along an A* path that keeps a safe distance from walls and cliffs. An earlier assignment covered particle-filter localisation.",
+    tags: ["Python", "Cozmo SDK", "NumPy", "Kalman filter", "A* planning", "Particle filter"],
+    year: "2024",
+    repo: "https://github.com/AmineBennani7/search_and_rescue_robotic",
+    cover: { image: "cozmo/localisation-1", fit: "cover", ratio: "1 / 1", kind: "Plot", caption: "Particle-filter localisation run from the earlier assignment: particles, trajectory and estimated robot position." },
+  },
+  {
     slug: "council",
     index: "03",
     title: "AI Council",
@@ -146,11 +193,12 @@ export const projects = [
     categories: ["ai", "software"],
     headline: "A Python tool that makes two AI coding agents work together.",
     summary:
-      "Given a one-sentence task, Codex CLI writes a plan, Claude Code CLI implements it, Playwright tests and screenshots the page on desktop and mobile, and Codex reviews the result. Accepted changes are committed with Git; rejected ones go back to the builder with feedback.",
+      "A Python tool that runs one development task through two coding agents: Codex CLI plans and reviews, Claude Code CLI implements, and Playwright checks the result in a real browser before Git commits it.",
     tags: ["Python", "Codex CLI", "Claude Code CLI", "Playwright", "Git", "pytest"],
     status: { label: "V1 validated · V2 experimental", tone: "progress" },
     year: "2026",
     repo: "https://github.com/AmineBennani7/ai-council",
+    repoPrivate: true,
     cover: { diagram: "council", kind: "Diagram", caption: "V1 workflow for one task started by the user." },
     facts: [
       ["Started by", "The user, one task per run"],
@@ -328,6 +376,7 @@ export const projects = [
     status: { label: "In development · runs locally", tone: "wip" },
     year: "2026",
     repo: "https://github.com/AmineBennani7/ClairSinistre",
+    repoPrivate: true,
     cover: { diagram: "clair", kind: "Diagram", caption: "Current pipeline (milestone M1). The interface shows insurer documents, so it is not deployed publicly." },
     facts: [
       ["Stage", "Milestone M1, technical validation"],

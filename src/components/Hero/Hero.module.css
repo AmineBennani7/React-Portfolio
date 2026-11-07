@@ -1,13 +1,51 @@
 .hero {
-  padding-top: calc(var(--nav-h) + clamp(48px, 10vw, 120px));
+  padding-top: calc(var(--nav-h) + clamp(32px, 8vw, 96px));
   padding-bottom: clamp(56px, 8vw, 96px);
   border-bottom: 1px solid var(--line);
 }
 
 .inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    "photo"
+    "text";
+  gap: 24px;
+}
+
+.text {
+  grid-area: text;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  min-width: 0;
+}
+
+.photo {
+  grid-area: photo;
+  width: 96px;
+  animation: fade 0.9s var(--ease-out) both;
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line-strong);
+}
+
+@media (min-width: 820px) {
+  .inner {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas: "text photo";
+    column-gap: clamp(32px, 6vw, 96px);
+  }
+  .photo {
+    width: clamp(150px, 15vw, 200px);
+    margin-top: 8px;
+  }
 }
 
 .name {

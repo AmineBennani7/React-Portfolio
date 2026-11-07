@@ -78,9 +78,13 @@ export function CaseStudy({ project, onClose }) {
             </dl>
 
             <div className={styles.links}>
-              <a href={p.repo} target="_blank" rel="noreferrer" className={styles.repo}>
-                View repository on GitHub <span aria-hidden="true">↗</span>
-              </a>
+              {p.repoPrivate ? (
+                <span className={styles.note}>The repository is private.</span>
+              ) : (
+                <a href={p.repo} target="_blank" rel="noreferrer" className={styles.repo}>
+                  View repository on GitHub <span aria-hidden="true">↗</span>
+                </a>
+              )}
             </div>
           </header>
 
@@ -161,9 +165,13 @@ export function CaseStudy({ project, onClose }) {
           )}
 
           <footer className={styles.footer}>
-            <a href={p.repo} target="_blank" rel="noreferrer" className={styles.repo}>
-              Read the full README and code <span aria-hidden="true">↗</span>
-            </a>
+            {p.repoPrivate ? (
+              <span />
+            ) : (
+              <a href={p.repo} target="_blank" rel="noreferrer" className={styles.repo}>
+                Read the full README and code <span aria-hidden="true">↗</span>
+              </a>
+            )}
             <button type="button" className={styles.close} onClick={() => ref.current.close()}>
               Back to work
             </button>
