@@ -1,0 +1,12 @@
+# Vite 7 needs Node 20.19 or newer; pin it so the existing site builds the same way.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
