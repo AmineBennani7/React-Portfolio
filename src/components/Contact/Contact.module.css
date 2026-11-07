@@ -1,86 +1,162 @@
-@import "../../vars.css";
+.footer {
+  position: relative;
+  padding-top: clamp(72px, 10vw, 150px);
+  padding-bottom: 28px;
+  border-top: 1px solid var(--line);
+  overflow: hidden;
+}
 
-.container {
-  color: var(--color-text);
-  margin-top: 120px;
-  background-color: #b2dfdb;
+.footer::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -40vmax;
+  width: 90vmax;
+  height: 60vmax;
+  transform: translateX(-50%);
+  background: radial-gradient(closest-side, rgba(93, 139, 255, 0.12), transparent 70%);
+  pointer-events: none;
+}
+
+.footer > :global(.container) {
+  position: relative;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-2);
+}
+
+.index {
+  color: var(--accent-hi);
+  margin-right: 10px;
+}
+
+.title {
+  margin-top: 20px;
+  font-size: clamp(2.8rem, 9vw, 7.5rem);
+  line-height: 0.92;
+  letter-spacing: -0.05em;
+  font-weight: 540;
+  max-width: 16ch;
+}
+
+.title :global(.serif) {
+  color: var(--accent-hi);
+  font-size: 1.05em;
+}
+
+.intro {
+  margin-top: 28px;
+  max-width: 48ch;
+  color: var(--text-2);
+  font-size: 17px;
+}
+
+.emailRow {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  width: 100%;
-  padding: 58px 10%;
-  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-top: 48px;
 }
 
-.text h2 {
-  font-size: 80px;
-  font-weight: 700;
-  letter-spacing: 4px;
+.email {
+  font-size: clamp(1.25rem, 4.6vw, 3rem);
+  letter-spacing: -0.03em;
+  font-weight: 500;
+  border-bottom: 1px solid var(--line-strong);
+  padding-bottom: 4px;
+  overflow-wrap: anywhere;
+  transition: border-color 0.3s, color 0.3s;
+}
+.email:hover {
+  color: var(--accent-hi);
+  border-color: var(--accent);
 }
 
-.text p {
-  font-size: 40px;
-  font-weight: 400;
-  letter-spacing: 2px;
+.copy {
+  min-height: 40px;
+  padding: 0 16px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  transition: color 0.2s, border-color 0.2s;
+}
+.copy:hover {
+  color: var(--text);
+  border-color: var(--text-2);
 }
 
 .links {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  list-style: none;
-  gap: 26px;
+  display: grid;
+  margin-top: 56px;
+  border-top: 1px solid var(--line-strong);
 }
 
-.link {
-  display: flex;
-  align-items: center;
-  gap: 25px;
+.links a {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: baseline;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: clamp(1.25rem, 2.6vw, 1.75rem);
+  letter-spacing: -0.02em;
+  font-weight: 500;
+  transition: padding 0.35s var(--ease-out), color 0.25s;
 }
 
-.link a {
-  color: var(--color-text);
-  text-decoration: none;
-  font-size: 30px;
-  font-weight: 400;
-  letter-spacing: 1.5px;
+.links a:hover {
+  padding-left: 12px;
+  color: var(--accent-hi);
 }
 
-/* Responsive adjustments */
-@media screen and (max-width: 830px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-    padding: 58px 5%; 
-  }
+.linkMeta {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  font-weight: 450;
+}
 
-  .text h2 {
-    font-size: 50px; 
-  }
-
-  .text p {
-    font-size: 25px; 
-  }
-
+@media (min-width: 900px) {
   .links {
-    width: 100%; 
-  }
-
-  .link a {
-    font-size: 20px; 
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 24px;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .text h2 {
-    font-size: 40px;
-  }
+.base {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px 24px;
+  margin-top: clamp(64px, 10vw, 120px);
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--text-3);
+}
 
-  .text p {
-    font-size: 18px; 
-  }
+.base a {
+  color: var(--text-2);
+}
+.base a:hover {
+  color: var(--text);
+}
 
-  .link a {
-    font-size: 18px; 
-  }
+.top {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }

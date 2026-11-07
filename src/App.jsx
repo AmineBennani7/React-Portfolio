@@ -1,22 +1,28 @@
-import styles from "./App.module.css";
 import { About } from "./components/About/About";
+import { Archive } from "./components/Archive/Archive";
 import { Contact } from "./components/Contact/Contact";
 import { Experience } from "./components/Experience/Experience";
-import { Hero } from "./components/Intro/Intro";
-import { Navbar } from "./components/Navbar/Navbar";
-import { Projects } from "./components/Projects/Projects";
+import { Hero } from "./components/Hero/Hero";
+import { Nav } from "./components/Nav/Nav";
+import { Work } from "./components/Work/Work";
+import { useRevealOnScroll } from "./lib/hooks";
 
-function App() {
+export default function App() {
+  useRevealOnScroll();
   return (
-    <div className={styles.App}>
-      <Navbar />
-      <Hero />
-      <About />
-      <Experience />
-      <Projects />
+    <>
+      <a className="skip-link" href="#work">
+        Skip to selected work
+      </a>
+      <Nav />
+      <main id="top">
+        <Hero />
+        <Work />
+        <Experience />
+        <About />
+        <Archive />
+      </main>
       <Contact />
-    </div>
+    </>
   );
 }
-
-export default App;
