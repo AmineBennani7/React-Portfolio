@@ -15,8 +15,6 @@ export function Contact() {
     }
   };
 
-  const cvRequest = `mailto:${profile.email}?subject=${encodeURIComponent("CV request")}`;
-
   return (
     <footer id="contact" className={styles.footer} aria-labelledby="contact-title">
       <div className="container">
@@ -53,21 +51,6 @@ export function Contact() {
               <span className={styles.linkMeta}>AmineBennani7</span>
               <span aria-hidden="true">↗</span>
             </a>
-          </li>
-          <li>
-            {profile.cvUrl ? (
-              <a href={profile.cvUrl} target="_blank" rel="noreferrer" download>
-                <span className={styles.linkLabel}>CV</span>
-                <span className={styles.linkMeta}>PDF</span>
-                <span aria-hidden="true">↓</span>
-              </a>
-            ) : (
-              <a href={cvRequest}>
-                <span className={styles.linkLabel}>CV</span>
-                <span className={styles.linkMeta}>on request, by email</span>
-                <span aria-hidden="true">→</span>
-              </a>
-            )}
           </li>
         </ul>
 

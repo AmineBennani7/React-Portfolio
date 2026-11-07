@@ -7,9 +7,6 @@ export const profile = {
   email: "aminebenn2000@gmail.com",
   linkedin: "https://www.linkedin.com/in/amine-bennani-51638410a/",
   github: "https://github.com/AmineBennani7",
-  // Set to a file in /public (e.g. "/cv/amine-bennani-cv.pdf") once an
-  // up-to-date CV is ready. While null, the site offers the CV on request.
-  cvUrl: null,
 };
 
 export const experience = [
@@ -118,7 +115,7 @@ export const expertise = [
   },
   {
     domain: "Cloud & business intelligence",
-    items: ["AWS", "Amazon QuickSight", "Microsoft Fabric", "Power BI", "DAX", "Data warehousing", "Star schema modelling"],
+    items: ["AWS S3", "AWS Athena", "Amazon QuickSight", "Microsoft Fabric", "Power BI", "DAX", "Data warehousing", "Star schema modelling"],
     evidence: [
       { label: "Sword Group", href: "#exp-sword" },
       { label: "Fabric Analytics", href: "#work/fabric" },
