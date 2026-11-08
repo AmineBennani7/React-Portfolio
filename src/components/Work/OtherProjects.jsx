@@ -1,14 +1,16 @@
+import { useLang } from "../../i18n/context";
 import styles from "./OtherProjects.module.css";
 
 /**
  * Compact list: projects with a case study open it; the rest link to GitHub.
  */
 export function OtherProjects({ items, onOpen }) {
+  const { t } = useLang();
   if (items.length === 0) return null;
   return (
     <div className={styles.wrap}>
       <h3 className={styles.title} data-reveal>
-        Other projects
+        {t.work.otherProjects}
       </h3>
       <ul className={styles.list}>
         {items.map((a) => (
@@ -20,15 +22,15 @@ export function OtherProjects({ items, onOpen }) {
             <span className={styles.actions}>
               {a.slug && (
                 <button type="button" className={styles.action} onClick={() => onOpen(a.slug)}>
-                  Case study
+                  {t.work.caseStudy}
                 </button>
               )}
               {a.repoPrivate ? (
-                <span className={styles.private}>Private repo</span>
+                <span className={styles.private}>{t.work.privateRepoShort}</span>
               ) : (
                 <a href={a.href} target="_blank" rel="noreferrer" className={styles.action}>
                   GitHub <span aria-hidden="true">↗</span>
-                  <span className="visually-hidden"> repository for {a.title} (opens in a new tab)</span>
+                  <span className="visually-hidden">{t.work.repoFor(a.title)}</span>
                 </a>
               )}
             </span>

@@ -1,15 +1,17 @@
-import { education } from "../../data/profile";
+import { useContent, useLang } from "../../i18n/context";
 import { SectionHead } from "../ui/SectionHead";
 import styles from "./Education.module.css";
 
 export function Education() {
+  const { t } = useLang();
+  const { education } = useContent();
   return (
     <section id="education" className={styles.section} aria-labelledby="education-title">
       <div className="container">
-        <SectionHead id="education-title" title="Education" />
+        <SectionHead id="education-title" title={t.sections.education} />
         <ul className={styles.list}>
           {education.map((e) => (
-            <li key={e.title} className={styles.item} data-reveal>
+            <li key={e.year} className={styles.item} data-reveal>
               <p className={styles.year}>{e.year}</p>
               <div className={styles.main}>
                 <h3 className={styles.title}>{e.title}</h3>

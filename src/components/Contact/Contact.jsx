@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { profile } from "../../data/profile";
+import { useLang } from "../../i18n/context";
 import styles from "./Contact.module.css";
 
 export function Contact() {
+  const { t } = useLang();
   const [copied, setCopied] = useState(false);
 
   const copy = async () => {
@@ -19,10 +21,10 @@ export function Contact() {
     <footer id="contact" className={styles.footer} aria-labelledby="contact-title">
       <div className="container">
         <h2 id="contact-title" className={styles.title} data-reveal>
-          Contact
+          {t.sections.contact}
         </h2>
         <p className={styles.intro} data-reveal>
-          The easiest way to reach me is by email. I&apos;m also on LinkedIn and GitHub.
+          {t.contact.intro}
         </p>
 
         <div className={styles.emailRow} data-reveal>
@@ -30,10 +32,10 @@ export function Contact() {
             {profile.email}
           </a>
           <button type="button" className={styles.copy} onClick={copy}>
-            {copied ? "Copied" : "Copy"}
+            {copied ? t.contact.copied : t.contact.copy}
           </button>
           <span className="visually-hidden" aria-live="polite">
-            {copied ? "Email address copied to clipboard" : ""}
+            {copied ? t.contact.copiedLive : ""}
           </span>
         </div>
 
@@ -56,9 +58,9 @@ export function Contact() {
 
         <div className={styles.base}>
           <p>© {new Date().getFullYear()} {profile.name}</p>
-          <p>Built with React and Vite.</p>
+          <p>{t.contact.builtWith}</p>
           <a href="#top" className={styles.top}>
-            Back to top <span aria-hidden="true">↑</span>
+            {t.contact.backToTop} <span aria-hidden="true">↑</span>
           </a>
         </div>
       </div>

@@ -1,7 +1,85 @@
 .hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   padding-top: calc(var(--nav-h) + clamp(32px, 8vw, 96px));
   padding-bottom: clamp(56px, 8vw, 96px);
   border-bottom: 1px solid var(--line);
+}
+
+/* Background: soft drifting light plus a faint technical grid. Slow, low contrast, decorative only. */
+.bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(180deg, #0c0e12 0%, var(--bg) 100%);
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  will-change: transform;
+}
+
+.blobA {
+  width: 46vmax;
+  height: 46vmax;
+  top: -18vmax;
+  right: -10vmax;
+  background: radial-gradient(closest-side, rgba(93, 139, 255, 0.28), transparent);
+  animation: driftA 38s ease-in-out infinite alternate;
+}
+
+.blobB {
+  width: 34vmax;
+  height: 34vmax;
+  bottom: -16vmax;
+  left: -8vmax;
+  background: radial-gradient(closest-side, rgba(56, 189, 190, 0.14), transparent);
+  animation: driftB 46s ease-in-out infinite alternate;
+}
+
+.blobC {
+  width: 26vmax;
+  height: 26vmax;
+  top: 30%;
+  left: 38%;
+  background: radial-gradient(closest-side, rgba(140, 120, 255, 0.12), transparent);
+  animation: driftC 52s ease-in-out infinite alternate;
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(236, 234, 228, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(236, 234, 228, 0.05) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(ellipse 75% 70% at 70% 35%, #000 10%, transparent 75%);
+  mask-image: radial-gradient(ellipse 75% 70% at 70% 35%, #000 10%, transparent 75%);
+  animation: gridShift 60s linear infinite;
+}
+
+@keyframes driftA {
+  to { transform: translate(-8vmax, 6vmax) scale(1.08); }
+}
+@keyframes driftB {
+  to { transform: translate(10vmax, -5vmax) scale(1.12); }
+}
+@keyframes driftC {
+  to { transform: translate(-12vmax, -4vmax) scale(0.9); }
+}
+@keyframes gridShift {
+  to { background-position: 56px 56px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blob,
+  .grid {
+    animation: none;
+  }
 }
 
 .inner {

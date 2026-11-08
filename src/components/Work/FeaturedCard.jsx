@@ -1,7 +1,9 @@
+import { useLang } from "../../i18n/context";
 import { Media } from "./Media";
 import styles from "./FeaturedCard.module.css";
 
 export function FeaturedCard({ project: p, onOpen }) {
+  const { t } = useLang();
   const hasCase = Boolean(p.caseStudy);
   const cover = p.cardCover || p.cover;
   return (
@@ -12,7 +14,7 @@ export function FeaturedCard({ project: p, onOpen }) {
             type="button"
             className={styles.textCard}
             onClick={() => onOpen(p.slug)}
-            aria-label={`Open the ${p.title} case study`}
+            aria-label={t.work.openCase(p.title)}
             tabIndex={-1}
           >
             <span className={styles.textSteps}>
@@ -29,7 +31,7 @@ export function FeaturedCard({ project: p, onOpen }) {
             type="button"
             className={styles.mediaButton}
             onClick={() => onOpen(p.slug)}
-            aria-label={`Open the ${p.title} case study`}
+            aria-label={t.work.openCase(p.title)}
             tabIndex={-1}
           >
             <Media media={cover} fit={cover.fit || "contain"} ratio="16 / 10" sizes="(min-width: 900px) 46vw, 100vw" showCaption={false} />
@@ -56,7 +58,7 @@ export function FeaturedCard({ project: p, onOpen }) {
           </h3>
           <p className={styles.summary}>{p.summary}</p>
           {p.stats && (
-            <ul className={styles.figures} aria-label="Results">
+            <ul className={styles.figures} aria-label={t.work.results}>
               {p.stats.map(([value, label]) => (
                 <li key={label}>
                   <strong>{value}</strong> {label}
@@ -67,7 +69,7 @@ export function FeaturedCard({ project: p, onOpen }) {
           {p.status && p.status.tone !== "done" && (
             <p className={`${styles.status} ${styles[p.status.tone]}`}>{p.status.label}</p>
           )}
-          <ul className={styles.tags} aria-label="Technologies">
+          <ul className={styles.tags} aria-label={t.work.techLabel}>
             {p.tags.map((t) => (
               <li key={t}>{t}</li>
             ))}
@@ -75,14 +77,14 @@ export function FeaturedCard({ project: p, onOpen }) {
           <div className={styles.actions}>
             {hasCase && (
               <button type="button" className={styles.primary} onClick={() => onOpen(p.slug)}>
-                Case study <span aria-hidden="true">→</span>
+                {t.work.caseStudy} <span aria-hidden="true">→</span>
               </button>
             )}
-            {p.repo && p.repoPrivate && <span className={styles.private}>Private repository</span>}
+            {p.repo && p.repoPrivate && <span className={styles.private}>{t.work.privateRepo}</span>}
             {p.repo && !p.repoPrivate && (
               <a className={styles.secondary} href={p.repo} target="_blank" rel="noreferrer">
                 GitHub <span aria-hidden="true">↗</span>
-                <span className="visually-hidden"> repository for {p.title} (opens in a new tab)</span>
+                <span className="visually-hidden">{t.work.repoFor(p.title)}</span>
               </a>
             )}
             {(p.links || []).map((l) => (

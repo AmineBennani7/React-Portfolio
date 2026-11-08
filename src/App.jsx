@@ -5,14 +5,16 @@ import { Hero } from "./components/Hero/Hero";
 import { Nav } from "./components/Nav/Nav";
 import { Skills } from "./components/Skills/Skills";
 import { Work } from "./components/Work/Work";
+import { useLang } from "./i18n/context";
 import { useRevealOnScroll } from "./lib/hooks";
 
 export default function App() {
   useRevealOnScroll();
+  const { t } = useLang();
   return (
     <>
       <a className="skip-link" href="#experience">
-        Skip to content
+        {t.skip}
       </a>
       <Nav />
       <main id="top">

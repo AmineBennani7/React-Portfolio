@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import data from "../../data/trajectories.json";
+import { useLang } from "../../i18n/context";
 import { useReducedMotion } from "../../lib/hooks";
 import styles from "./TrajectoryField.module.css";
 
@@ -41,13 +42,21 @@ function pointInRing(x, y, ring) {
   return inside;
 }
 
-const fmt = new Intl.NumberFormat("en-GB");
+const LOCALES = { en: "en-GB", fr: "fr-FR", es: "es-ES" };
 
 export function TrajectoryField() {
   const wrapRef = useRef(null);
   const canvasRef = useRef(null);
   const readoutRef = useRef(null);
   const reduced = useReducedMotion();
+  const { lang, t } = useLang();
+  const r = t.replay;
+  const fmt = new Intl.NumberFormat(LOCALES[lang]);
+  // The drawing loop reads labels through a ref so a language change needs no restart.
+  const labelsRef = useRef({ outside: r.outside, fmt: new Intl.NumberFormat(LOCALES.en) });
+  useEffect(() => {
+    labelsRef.current = { outside: r.outside, fmt: new Intl.NumberFormat(LOCALES[lang]) };
+  }, [lang, r.outside]);
 
   useEffect(() => {
     const wrap = wrapRef.current;
@@ -264,9 +273,9 @@ export function TrajectoryField() {
       ctx.stroke();
 
       readout.dataset.active = "true";
-      readout.querySelector("[data-k=fixes]").textContent = fmt.format(fixes);
+      readout.querySelector("[data-k=fixes]").textContent = labelsRef.current.fmt.format(fixes);
       readout.querySelector("[data-k=vehicles]").textContent = String(vehicles.size);
-      readout.querySelector("[data-k=zone]").textContent = zone ? zone.name : "outside zones";
+      readout.querySelector("[data-k=zone]").textContent = zone ? zone.name : labelsRef.current.outside;
     }
 
     function loop(now) {
@@ -341,32 +350,31 @@ export function TrajectoryField() {
       </div>
       <div ref={readoutRef} className={styles.readout} data-active="false" aria-hidden="true">
         <div className={styles.readoutIdle}>
-          <span>{tracks.length} trajectories</span>
-          <span>{fmt.format(totalFixes)} fixes</span>
-          <span>{data.zones.length} geofences</span>
+          <span>{tracks.length} {r.trajectories}</span>
+          <span>{fmt.format(totalFixes)} {r.fixes}</span>
+          <span>{data.zones.length} {r.geofences}</span>
         </div>
         <dl className={styles.readoutLive}>
           <div>
-            <dt>Probe</dt>
+            <dt>{r.probe}</dt>
             <dd>r {PROBE_RADIUS_M} m</dd>
           </div>
           <div>
-            <dt>Fixes</dt>
+            <dt>{r.pointsLabel}</dt>
             <dd data-k="fixes">0</dd>
           </div>
           <div>
-            <dt>Vehicles</dt>
+            <dt>{r.vehicles}</dt>
             <dd data-k="vehicles">0</dd>
           </div>
           <div>
-            <dt>Zone</dt>
+            <dt>{r.zone}</dt>
             <dd data-k="zone">—</dd>
           </div>
         </dl>
       </div>
       <figcaption className={styles.caption}>
-        The four cleaned trajectories from the sample data, replayed. Move the cursor (or drag on a touch screen) to
-        count the GPS points within 180 m and see which geofence you are in.
+        {r.caption}
       </figcaption>
     </figure>
   );

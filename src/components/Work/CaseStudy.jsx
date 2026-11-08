@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { useLang } from "../../i18n/context";
 import { Media } from "./Media";
 import { Pipeline } from "./Pipeline";
 import { TrajectoryField } from "./TrajectoryField";
@@ -8,6 +9,8 @@ import styles from "./CaseStudy.module.css";
  * Case study in a native modal <dialog>: focus is trapped and Escape closes it.
  */
 export function CaseStudy({ project, onClose }) {
+  const { t } = useLang();
+  const c = t.caseStudy;
   const ref = useRef(null);
   const lastFocus = useRef(null);
 
@@ -53,9 +56,9 @@ export function CaseStudy({ project, onClose }) {
         <article className={styles.sheet}>
           <header className={styles.header}>
             <div className={styles.headerBar}>
-              <span className={styles.crumb}>Case study</span>
+              <span className={styles.crumb}>{c.crumb}</span>
               <button type="button" className={styles.close} onClick={() => ref.current.close()}>
-                Close <span aria-hidden="true">✕</span>
+                {c.close} <span aria-hidden="true">✕</span>
               </button>
             </div>
             <p className={styles.discipline}>{p.discipline}</p>
@@ -72,17 +75,17 @@ export function CaseStudy({ project, onClose }) {
                 </div>
               ))}
               <div>
-                <dt>Status</dt>
+                <dt>{c.status}</dt>
                 <dd>{p.status.label}</dd>
               </div>
             </dl>
 
             <div className={styles.links}>
               {p.repoPrivate ? (
-                <span className={styles.note}>The repository is private.</span>
+                <span className={styles.note}>{c.privateNote}</span>
               ) : (
                 <a href={p.repo} target="_blank" rel="noreferrer" className={styles.repo}>
-                  View repository on GitHub <span aria-hidden="true">↗</span>
+                  {c.viewRepo} <span aria-hidden="true">↗</span>
                 </a>
               )}
             </div>
@@ -102,15 +105,15 @@ export function CaseStudy({ project, onClose }) {
             </div>
           )}
 
-          <Block title="Problem">
+          <Block title={c.problem}>
             <p className={styles.lead}>{cs.problem}</p>
           </Block>
 
-          <Block title="Architecture">
-            <Pipeline steps={cs.architecture} label={`${p.title} architecture stages`} />
+          <Block title={c.architecture}>
+            <Pipeline steps={cs.architecture} label={c.stages(p.title)} />
           </Block>
 
-          <Block title="Implementation">
+          <Block title={c.implementation}>
             <ul className={styles.bullets}>
               {cs.implementation.map((t) => (
                 <li key={t}>{t}</li>
@@ -118,12 +121,12 @@ export function CaseStudy({ project, onClose }) {
             </ul>
           </Block>
 
-          <Block title="Tools and components">
+          <Block title={c.tools}>
             <table className={styles.table}>
               <thead>
                 <tr>
-                  <th scope="col">Component</th>
-                  <th scope="col">Built with</th>
+                  <th scope="col">{c.component}</th>
+                  <th scope="col">{c.builtWith}</th>
                 </tr>
               </thead>
               <tbody>
@@ -137,7 +140,7 @@ export function CaseStudy({ project, onClose }) {
             </table>
           </Block>
 
-          <Block title="Results">
+          <Block title={c.results}>
             <ul className={`${styles.bullets} ${styles.results}`}>
               {cs.results.map((t) => (
                 <li key={t}>{t}</li>
@@ -146,7 +149,7 @@ export function CaseStudy({ project, onClose }) {
             {cs.resultsNote && <p className={styles.note}>{cs.resultsNote}</p>}
           </Block>
 
-          <Block title="Limitations">
+          <Block title={c.limitations}>
             <ul className={`${styles.bullets} ${styles.limits}`}>
               {cs.limitations.map((t) => (
                 <li key={t}>{t}</li>
@@ -155,7 +158,7 @@ export function CaseStudy({ project, onClose }) {
           </Block>
 
           {cs.gallery.length > 0 && (
-            <Block title="Evidence">
+            <Block title={c.evidence}>
               <div className={styles.gallery}>
                 {cs.gallery.map((g) => (
                   <Media key={g.image} media={g} sizes="(min-width: 1100px) 500px, 100vw" />
@@ -169,11 +172,11 @@ export function CaseStudy({ project, onClose }) {
               <span />
             ) : (
               <a href={p.repo} target="_blank" rel="noreferrer" className={styles.repo}>
-                Read the full README and code <span aria-hidden="true">↗</span>
+                {c.readFull} <span aria-hidden="true">↗</span>
               </a>
             )}
             <button type="button" className={styles.close} onClick={() => ref.current.close()}>
-              Back to work
+              {c.back}
             </button>
           </footer>
         </article>

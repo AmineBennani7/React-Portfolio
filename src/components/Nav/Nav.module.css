@@ -57,7 +57,6 @@
 
 .toggle {
   position: relative;
-  z-index: 2;
   width: 44px;
   height: 44px;
   display: grid;
@@ -142,7 +141,7 @@
   color: var(--text-3);
 }
 
-@media (min-width: 820px) {
+@media (min-width: 1080px) {
   .toggle {
     display: none;
   }
@@ -174,5 +173,36 @@
   }
   .num {
     font-size: 10px;
+  }
+}
+
+.right {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav {
+  display: contents;
+}
+
+@media (max-width: 479px) {
+  .brandName {
+    display: none;
+  }
+}
+
+@media (min-width: 1080px) {
+  .inner {
+    gap: 20px;
+  }
+  .nav {
+    display: block;
+    margin-left: auto;
+  }
+  .right {
+    gap: 0;
   }
 }

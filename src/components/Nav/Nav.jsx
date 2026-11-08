@@ -1,16 +1,19 @@
 import { useEffect, useState } from "react";
 import { profile } from "../../data/profile";
+import { useLang } from "../../i18n/context";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 import styles from "./Nav.module.css";
 
-const links = [
-  { href: "#experience", label: "Experience" },
-  { href: "#education", label: "Education" },
-  { href: "#work", label: "Projects" },
-  { href: "#skills", label: "Skills" },
-  { href: "#contact", label: "Contact" },
+const LINKS = [
+  { href: "#experience", key: "experience" },
+  { href: "#education", key: "education" },
+  { href: "#work", key: "projects" },
+  { href: "#skills", key: "skills" },
+  { href: "#contact", key: "contact" },
 ];
 
 export function Nav() {
+  const { t } = useLang();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState("");
@@ -24,7 +27,6 @@ export function Nav() {
 
   // Highlight the section currently in view.
   useEffect(() => {
-    const ids = links.map((l) => l.href.slice(1));
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
@@ -33,8 +35,8 @@ export function Nav() {
       },
       { rootMargin: "-45% 0px -50% 0px" },
     );
-    ids.forEach((id) => {
-      const el = document.getElementById(id);
+    LINKS.forEach((l) => {
+      const el = document.getElementById(l.href.slice(1));
       if (el) io.observe(el);
     });
     return () => io.disconnect();
@@ -61,7 +63,24 @@ export function Nav() {
           <span className={styles.brandName}>{profile.name}</span>
         </a>
 
-        <nav aria-label="Primary">
+        <nav aria-label={t.nav.label} className={styles.nav}>
+          <ul id="primary-menu" className={styles.links}>
+            {LINKS.map((l, i) => (
+              <li key={l.href} style={{ "--i": i }}>
+                <a
+                  href={l.href}
+                  aria-current={active === l.href.slice(1) ? "true" : undefined}
+                  onClick={() => setOpen(false)}
+                >
+                  {t.nav[l.key]}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <div className={styles.right}>
+          <LanguageSwitcher />
           <button
             type="button"
             className={styles.toggle}
@@ -69,23 +88,10 @@ export function Nav() {
             aria-controls="primary-menu"
             onClick={() => setOpen((o) => !o)}
           >
-            <span className="visually-hidden">{open ? "Close menu" : "Open menu"}</span>
+            <span className="visually-hidden">{open ? t.nav.closeMenu : t.nav.openMenu}</span>
             <span className={styles.burger} aria-hidden="true" />
           </button>
-          <ul id="primary-menu" className={styles.links}>
-            {links.map((l, i) => (
-              <li key={l.href} style={{ "--i": i }}>
-                <a
-                  href={l.href}
-                  aria-current={active === l.href.slice(1) ? "true" : undefined}
-                  onClick={() => setOpen(false)}
-                >
-                  {l.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        </div>
       </div>
     </header>
   );

@@ -1,16 +1,18 @@
-import { experience } from "../../data/profile";
+import { useContent, useLang } from "../../i18n/context";
 import { SectionHead } from "../ui/SectionHead";
 import styles from "./Experience.module.css";
 
 export function Experience() {
+  const { t } = useLang();
+  const { experience } = useContent();
   return (
     <section id="experience" className={styles.section} aria-labelledby="experience-title">
       <div className="container">
-        <SectionHead id="experience-title" title="Experience" />
+        <SectionHead id="experience-title" title={t.sections.experience} />
 
         <ol className={styles.timeline}>
           {experience.map((job) => (
-            <li key={job.org} id={job.id} className={styles.row} data-reveal>
+            <li key={job.id} id={job.id} className={styles.row} data-reveal>
               <p className={styles.period}>{job.period}</p>
               <div className={styles.what}>
                 <h3 className={styles.role}>{job.role}</h3>
@@ -28,7 +30,7 @@ export function Experience() {
                     ))}
                   </ul>
                 )}
-                <ul className={styles.tags} aria-label="Tools">
+                <ul className={styles.tags} aria-label={t.experience.tools}>
                   {job.tags.map((t) => (
                     <li key={t}>{t}</li>
                   ))}
