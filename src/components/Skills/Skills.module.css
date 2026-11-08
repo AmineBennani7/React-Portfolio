@@ -9,8 +9,9 @@
 
 .domain {
   display: grid;
-  gap: 10px;
-  padding-block: 20px;
+  align-content: start;
+  gap: 14px;
+  padding-block: 24px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -23,15 +24,16 @@
 .stack {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px 0;
-  font-size: 15.5px;
-  line-height: 1.5;
+  gap: 8px;
 }
 
-.stack li:not(:last-child)::after {
-  content: "·";
-  margin-inline: 10px;
-  color: var(--text-3);
+.stack li {
+  padding: 5px 11px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 14px;
+  line-height: 1.35;
+  color: var(--text-2);
 }
 
 .evidence {
@@ -59,24 +61,43 @@
   text-decoration-color: var(--accent);
 }
 
-@media (min-width: 900px) {
-  .education {
-    grid-template-columns: 1fr 1fr;
-    column-gap: 40px;
-  }
+.languages {
+  display: grid;
+  gap: 12px;
+  padding-block: 24px;
+  border-bottom: 1px solid var(--line);
 }
 
-@media (min-width: 1024px) {
-  .domain {
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    column-gap: 24px;
+.languagesTitle {
+  font-size: 17px;
+  font-weight: 520;
+  letter-spacing: -0.015em;
+}
+
+.languageList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 28px;
+  font-size: 15px;
+}
+
+.languageName {
+  color: var(--text);
+}
+
+.languageLevel {
+  margin-left: 8px;
+  color: var(--text-3);
+}
+
+@media (min-width: 900px) {
+  .domains {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 48px;
+  }
+  .languages {
+    grid-template-columns: max-content 1fr;
+    column-gap: 32px;
     align-items: baseline;
-  }
-  .domainName {
-    grid-column: 1 / span 3;
-  }
-  .stack,
-  .evidence {
-    grid-column: 4 / -1;
   }
 }

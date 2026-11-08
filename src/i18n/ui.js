@@ -23,9 +23,10 @@ const en = {
   hero: {
     role: "Software & AI Engineer",
     paragraphs: [
-      "I’m a Software & AI Engineer based in Luxembourg, working on AI, automation and data integration projects in logistics. At Sword Group, I’m responsible for the automation and AI side of my client assignment.",
-      "I studied Computer Engineering at the University of Seville and completed an MSc in Artificial Intelligence with Distinction at Oxford Brookes University. My background combines software development, computer vision and autonomous systems, including perception work for a Formula Student driverless car.",
-      "I’m especially interested in robotics, space and applied AI. I’ve studied and worked in Spain, the UK and Luxembourg, and I speak French, Spanish and English fluently, plus conversational Arabic.",
+      "I’m a Software & AI Engineer based in Luxembourg, with a background in Computer Engineering and an MSc in Artificial Intelligence with Distinction from Oxford Brookes University.",
+      "I currently work at Sword Group, where I’m responsible for AI and automation initiatives within my client assignment. My work involves developing software, connecting systems and turning ideas into solutions that people can actually use.",
+      "I’ve worked on quite different things over the years, including backend development, computer vision, autonomous systems and data engineering. I enjoy getting involved in the whole process, from understanding a problem and figuring out an approach to building, testing and improving the solution.",
+      "I’m naturally curious, always looking to learn something new, and open to taking on challenges in different areas of technology.",
     ],
     projects: "See my projects",
     contact: "Contact",
@@ -70,7 +71,16 @@ const en = {
     evidence: "Screenshots",
     stages: (title) => `${title} architecture stages`,
   },
-  skills: { usedIn: "Used in" },
+  skills: {
+    usedIn: "Used in",
+    languagesTitle: "Languages",
+    languages: [
+      { name: "French", level: "Native" },
+      { name: "Spanish", level: "Native" },
+      { name: "English", level: "C1" },
+      { name: "Arabic", level: "Conversational" },
+    ],
+  },
   contact: {
     intro: "The easiest way to reach me is by email. I’m also on LinkedIn and GitHub.",
     copy: "Copy",
@@ -146,9 +156,10 @@ const fr = {
   hero: {
     role: "Ingénieur Software et IA",
     paragraphs: [
-      "Je suis ingénieur Software et IA, basé au Luxembourg, et je travaille sur des projets d’IA, d’automatisation et d’intégration de données dans la logistique. Chez Sword Group, je suis responsable de la partie automatisation et IA de ma mission client.",
-      "J’ai étudié l’ingénierie informatique à l’Université de Séville et j’ai fait un MSc en intelligence artificielle à Oxford Brookes University, obtenu avec Distinction. Mon profil combine développement logiciel, vision par ordinateur et systèmes autonomes, avec notamment un travail sur la perception d’une voiture autonome de Formula Student.",
-      "Je m’intéresse surtout à la robotique, au spatial et à l’IA appliquée. J’ai étudié et travaillé en Espagne, au Royaume-Uni et au Luxembourg, et je parle couramment français, espagnol et anglais, ainsi que l’arabe à un niveau conversationnel.",
+      "Je suis ingénieur Software et IA, basé au Luxembourg, avec une formation en ingénierie informatique et un MSc en intelligence artificielle obtenu avec Distinction à Oxford Brookes University.",
+      "Je travaille actuellement chez Sword Group, où je suis responsable des initiatives d’IA et d’automatisation dans le cadre de ma mission client. Mon travail consiste à développer des logiciels, à connecter des systèmes et à transformer des idées en solutions que les gens peuvent vraiment utiliser.",
+      "Au fil des années, j’ai travaillé sur des sujets assez différents, comme le développement backend, la vision par ordinateur, les systèmes autonomes et le data engineering. J’aime m’impliquer dans tout le processus, de la compréhension du problème et la recherche d’une approche jusqu’à la construction, les tests et l’amélioration de la solution.",
+      "Je suis curieux de nature, toujours en train d’apprendre quelque chose de nouveau, et ouvert à relever des défis dans différents domaines de la technologie.",
     ],
     projects: "Voir mes projets",
     contact: "Contact",
@@ -193,7 +204,16 @@ const fr = {
     evidence: "Captures",
     stages: (title) => `Étapes de l’architecture de ${title}`,
   },
-  skills: { usedIn: "Utilisé dans" },
+  skills: {
+    usedIn: "Utilisé dans",
+    languagesTitle: "Langues",
+    languages: [
+      { name: "Français", level: "Langue maternelle" },
+      { name: "Espagnol", level: "Langue maternelle" },
+      { name: "Anglais", level: "C1" },
+      { name: "Arabe", level: "Niveau conversationnel" },
+    ],
+  },
   contact: {
     intro: "Le plus simple pour me contacter, c’est par e-mail. Je suis aussi sur LinkedIn et GitHub.",
     copy: "Copier",
@@ -269,9 +289,10 @@ const es = {
   hero: {
     role: "Ingeniero de software e IA",
     paragraphs: [
-      "Soy ingeniero de software e IA, vivo en Luxemburgo y trabajo en proyectos de IA, automatización e integración de datos en logística. En Sword Group soy responsable de la parte de automatización e IA de mi proyecto en cliente.",
-      "Estudié Ingeniería Informática en la Universidad de Sevilla e hice un MSc en Inteligencia Artificial en Oxford Brookes University, que terminé con Distinction. Mi perfil combina desarrollo de software, visión por computador y sistemas autónomos, incluido trabajo de percepción para un coche autónomo de Formula Student.",
-      "Me interesan sobre todo la robótica, el espacio y la IA aplicada. He estudiado y trabajado en España, Reino Unido y Luxemburgo, y hablo francés, español e inglés con fluidez, además de árabe a nivel conversacional.",
+      "Soy ingeniero de software e IA, vivo en Luxemburgo y tengo formación en Ingeniería Informática y un MSc en Inteligencia Artificial con Distinction por Oxford Brookes University.",
+      "Actualmente trabajo en Sword Group, donde soy responsable de las iniciativas de IA y automatización dentro de mi proyecto en cliente. Mi trabajo consiste en desarrollar software, conectar sistemas y convertir ideas en soluciones que la gente pueda usar de verdad.",
+      "A lo largo de los años he trabajado en cosas bastante distintas, como desarrollo backend, visión por computador, sistemas autónomos e ingeniería de datos. Me gusta participar en todo el proceso, desde entender el problema y pensar cómo abordarlo hasta construir, probar y mejorar la solución.",
+      "Soy curioso por naturaleza, siempre busco aprender algo nuevo y estoy abierto a asumir retos en distintas áreas de la tecnología.",
     ],
     projects: "Ver mis proyectos",
     contact: "Contacto",
@@ -316,7 +337,16 @@ const es = {
     evidence: "Capturas",
     stages: (title) => `Etapas de la arquitectura de ${title}`,
   },
-  skills: { usedIn: "Usado en" },
+  skills: {
+    usedIn: "Usado en",
+    languagesTitle: "Idiomas",
+    languages: [
+      { name: "Francés", level: "Nativo" },
+      { name: "Español", level: "Nativo" },
+      { name: "Inglés", level: "C1" },
+      { name: "Árabe", level: "Nivel conversacional" },
+    ],
+  },
   contact: {
     intro: "La forma más sencilla de contactarme es por email. También estoy en LinkedIn y GitHub.",
     copy: "Copiar",

@@ -11,11 +11,11 @@ export function Skills() {
         <SectionHead id="skills-title" title={t.sections.skills} />
         <div className={styles.domains}>
           {expertise.map((d) => (
-            <article key={d.evidence[0].label + d.items[0]} className={styles.domain} data-reveal>
+            <article key={d.evidence[0].href + d.items[0]} className={styles.domain} data-reveal>
               <h3 className={styles.domainName}>{d.domain}</h3>
               <ul className={styles.stack}>
-                {d.items.map((t) => (
-                  <li key={t}>{t}</li>
+                {d.items.map((item) => (
+                  <li key={item}>{item}</li>
                 ))}
               </ul>
               <p className={styles.evidence}>
@@ -29,6 +29,18 @@ export function Skills() {
               </p>
             </article>
           ))}
+        </div>
+
+        <div className={styles.languages} data-reveal>
+          <h3 className={styles.languagesTitle}>{t.skills.languagesTitle}</h3>
+          <ul className={styles.languageList}>
+            {t.skills.languages.map((l) => (
+              <li key={l.name}>
+                <span className={styles.languageName}>{l.name}</span>
+                <span className={styles.languageLevel}>{l.level}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

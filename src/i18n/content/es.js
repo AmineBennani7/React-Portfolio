@@ -432,28 +432,20 @@ export const es = {
 
   expertise: [
     {
-      domain: "Programación e ingeniería de software",
-      items: ["Python", "SQL", "Java", "C++", "C#", "JavaScript", "TypeScript", "FastAPI", "Flask", "Spring Boot", "API REST", "Git", "Docker", "Linux", "pytest"],
+      domain: "Ingeniería de software",
+      items: ["Python", "Java", "SQL", "Desarrollo backend", "API REST", "FastAPI", "Spring Boot", "Git", "Docker", "Linux", "Testing", "CI/CD"],
     },
     {
-      domain: "Ingeniería de IA y LLM",
-      items: ["LLM", "RAG", "Agentes de IA", "LangChain", "Prompt engineering", "OCR", "Procesamiento de documentos", "Extracción estructurada", "PyTorch", "TensorFlow"],
+      domain: "IA y automatización",
+      items: ["LLM", "RAG", "Agentes de IA", "LangChain", "n8n", "OCR", "Procesamiento de documentos", "Automatización de workflows", "Integración de sistemas"],
     },
     {
-      domain: "Visión por computador y robótica",
-      items: ["OpenCV", "YOLOv8", "Detección de objetos", "Seguimiento multiobjeto", "ByteTrack", "GridTrackNet", "Homografía", "Percepción autónoma", "Filtro de Kalman", "Filtros de partículas", "Planificación de rutas A*", "Cozmo SDK"],
+      domain: "Visión por computador y sistemas autónomos",
+      items: ["OpenCV", "YOLOv8", "Detección y seguimiento de objetos", "PyTorch", "ROS", "SLAM", "Filtro de Kalman", "Localización"],
     },
     {
-      domain: "Ingeniería de datos y geoespacial",
-      items: ["PostgreSQL", "PostGIS", "Talend", "ETL / ELT", "Apache Airflow", "Pandas", "PySpark", "Delta Lake", "GeoPandas", "MovingPandas", "Shapely", "OSMnx"],
-    },
-    {
-      domain: "Cloud y business intelligence",
-      items: ["AWS S3", "AWS Athena", "Amazon QuickSight", "Microsoft Fabric", "Power BI", "DAX", "Data warehousing", "Modelado en estrella"],
-    },
-    {
-      domain: "Automatización e integración",
-      items: ["n8n", "Orquestación de workflows", "Webhooks", "Automatización con IA", "Playwright", "CI/CD (GitHub Actions)"],
+      domain: "Ingeniería de datos y analítica",
+      items: ["PostgreSQL", "Talend", "ETL / ELT", "Apache Airflow", "PySpark", "Microsoft Fabric", "AWS", "Power BI", "QuickSight"],
     },
   ],
 

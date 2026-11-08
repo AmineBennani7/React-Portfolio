@@ -77,8 +77,8 @@ export const education = [
 // "Used in" points to where it was used.
 export const expertise = [
   {
-    domain: "Programming & software engineering",
-    items: ["Python", "SQL", "Java", "C++", "C#", "JavaScript", "TypeScript", "FastAPI", "Flask", "Spring Boot", "REST APIs", "Git", "Docker", "Linux", "pytest"],
+    domain: "Software Engineering",
+    items: ["Python", "Java", "SQL", "Backend development", "REST APIs", "FastAPI", "Spring Boot", "Git", "Docker", "Linux", "Testing", "CI/CD"],
     evidence: [
       { label: "Sword Group", href: "#exp-sword" },
       { label: "Sopra Steria", href: "#exp-sopra" },
@@ -87,8 +87,8 @@ export const expertise = [
     ],
   },
   {
-    domain: "AI engineering & LLMs",
-    items: ["LLMs", "RAG", "AI agents", "LangChain", "Prompt engineering", "OCR", "Document processing", "Structured extraction", "PyTorch", "TensorFlow"],
+    domain: "AI & Automation",
+    items: ["LLMs", "RAG", "AI agents", "LangChain", "n8n", "OCR", "Document processing", "Workflow automation", "System integration"],
     evidence: [
       { label: "Sword Group", href: "#exp-sword" },
       { label: "ClairSinistre", href: "#work/clair" },
@@ -97,8 +97,8 @@ export const expertise = [
     ],
   },
   {
-    domain: "Computer vision & robotics",
-    items: ["OpenCV", "YOLOv8", "Object detection", "Multi-object tracking", "ByteTrack", "GridTrackNet", "Homography", "Autonomous perception", "Kalman filtering", "Particle filters", "A* path planning", "Cozmo SDK"],
+    domain: "Computer Vision & Autonomous Systems",
+    items: ["OpenCV", "YOLOv8", "Object detection and tracking", "PyTorch", "ROS", "SLAM", "Kalman filtering", "Localisation"],
     evidence: [
       { label: "Oxford Brookes Racing", href: "#project-obr" },
       { label: "Tennis CV System", href: "#project-tennis" },
@@ -106,30 +106,12 @@ export const expertise = [
     ],
   },
   {
-    domain: "Data engineering & geospatial",
-    items: ["PostgreSQL", "PostGIS", "Talend", "ETL / ELT", "Apache Airflow", "Pandas", "PySpark", "Delta Lake", "GeoPandas", "MovingPandas", "Shapely", "OSMnx"],
+    domain: "Data Engineering & Analytics",
+    items: ["PostgreSQL", "Talend", "ETL / ELT", "Apache Airflow", "PySpark", "Microsoft Fabric", "AWS", "Power BI", "QuickSight"],
     evidence: [
       { label: "Sword Group", href: "#exp-sword" },
-      { label: "GPS Trajectory Analysis", href: "#project-gps" },
       { label: "Airflow Pipeline", href: "#project-airflow" },
       { label: "Fabric Analytics", href: "#work/fabric" },
-    ],
-  },
-  {
-    domain: "Cloud & business intelligence",
-    items: ["AWS S3", "AWS Athena", "Amazon QuickSight", "Microsoft Fabric", "Power BI", "DAX", "Data warehousing", "Star schema modelling"],
-    evidence: [
-      { label: "Sword Group", href: "#exp-sword" },
-      { label: "Fabric Analytics", href: "#work/fabric" },
-      { label: "Sopra Steria", href: "#exp-sopra" },
-    ],
-  },
-  {
-    domain: "Automation & integration",
-    items: ["n8n", "Workflow orchestration", "Webhooks", "AI automation", "Playwright", "CI/CD (GitHub Actions)"],
-    evidence: [
-      { label: "Sword Group", href: "#exp-sword" },
-      { label: "AI Council", href: "#work/council" },
       { label: "GPS Trajectory Analysis", href: "#project-gps" },
     ],
   },
