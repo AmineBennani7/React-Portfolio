@@ -11,7 +11,7 @@ export const profile = {
 
 export const experience = [
   {
-    period: "Apr 2026 — Present",
+    period: "Feb 2026 — Present",
     role: "Data & AI Engineer",
     org: "Sword Group Luxembourg",
     id: "exp-sword",

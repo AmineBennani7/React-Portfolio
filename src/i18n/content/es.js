@@ -379,7 +379,7 @@ export const es = {
 
   experience: {
     "exp-sword": {
-      period: "Abr. 2026 — actualidad",
+      period: "Feb. 2026 — actualidad",
       role: "Ingeniero de Datos e IA",
       context: "Proyecto para EBTrans (logística)",
       summary:
