@@ -70,10 +70,10 @@ export const es = {
           ["Panel y mapas", "Streamlit, Folium, Altair"],
         ],
         results: [
-          "Con los datos de ejemplo de la flota: 2.046 registros leídos, 2.031 válidos (99,3 %) y 15 descartados, cada uno con su motivo.",
+          "Con los datos de ejemplo de la flota se leyeron 2.046 registros, de los que 2.031 eran válidos (99,3 %) y 15 se descartaron, cada uno con su motivo.",
           "4 trayectorias, 34,0 km, 11 paradas y 15 trayectos detectados.",
-          "La misma ruta recorrida dos días distintos coincide de forma muy precisa: Hausdorff 13,8 m, Fréchet 13,9 m y 100 % de solapamiento.",
-          "Se detectó el tramo rápido introducido a propósito: 7 puntos entre 72 y 84 km/h.",
+          "La misma ruta hecha dos días distintos coincide casi del todo, con una distancia de Hausdorff de 13,8 m, una de Fréchet de 13,9 m y un 100 % de solapamiento.",
+          "Se detectó el tramo rápido que añadí a propósito, con 7 puntos entre 72 y 84 km/h.",
         ],
         resultsNote: "Los resultados proceden de datos de ejemplo sintéticos, con errores añadidos a propósito.",
         limitations: [
@@ -83,7 +83,7 @@ export const es = {
         ],
         gallery: [
           { kind: "Captura de pantalla", caption: "Traza en bruto (discontinua) y traza limpia. La línea que sale del mapa es un salto GPS; los círculos blancos son puntos poco precisos." },
-          { kind: "Captura de pantalla", caption: "Pestaña de calidad de datos: registros descartados por motivo y distancia en cada fase de la limpieza." },
+          { kind: "Captura de pantalla", caption: "Pestaña de calidad de datos, con los registros descartados por motivo y la distancia en cada fase de la limpieza." },
           { kind: "Captura de pantalla", caption: "Eventos de geocercas y tiempo en cada zona." },
           { kind: "Captura de pantalla", caption: "Perfiles de velocidad y aceleración." },
         ],
@@ -94,11 +94,11 @@ export const es = {
       discipline: "Visión por computador · Tesis de MSc",
       headline: "Seguimiento de jugadores y pelota en vídeos de tenis amateur.",
       summary:
-        "Mi tesis de MSc: un pipeline que sigue a los jugadores con YOLOv8 y ByteTrack y una pelota pequeña y rápida con GridTrackNet, lo proyecta todo sobre la pista con una homografía y genera un vídeo anotado con minimapa y recuento de golpes.",
+        "Es mi tesis de MSc, un pipeline que sigue a los jugadores con YOLOv8 y ByteTrack y una pelota pequeña y rápida con GridTrackNet, lo proyecta todo sobre la pista con una homografía y genera un vídeo anotado con minimapa y recuento de golpes.",
       status: { label: "Terminado" },
       cover: {
         kind: "Salida del sistema",
-        caption: "Salida del sistema: jugadores seguidos con su ID, posición de la pelota, contadores de golpes y vista cenital de la pista (arriba a la derecha).",
+        caption: "Salida del sistema, con los jugadores seguidos y su ID, la posición de la pelota, los contadores de golpes y una vista cenital de la pista (arriba a la derecha).",
       },
       facts: [
         ["Jugadores", "YOLOv8 + ByteTrack"],
@@ -108,7 +108,7 @@ export const es = {
       ],
       caseStudy: {
         problem:
-          "Fue mi proyecto de tesis de MSc en Oxford Brookes. El análisis del tenis profesional se apoya en varias cámaras calibradas. Los partidos amateur suelen grabarse con una sola cámara fija, y la pelota ocupa apenas unos píxeles y a menudo sale borrosa. El objetivo era sacar datos útiles del partido con esa única vista: posición de los jugadores, trayectoria de la pelota y golpes por jugador.",
+          "Fue mi proyecto de tesis de MSc en Oxford Brookes. El análisis del tenis profesional se apoya en varias cámaras calibradas. Los partidos amateur suelen grabarse con una sola cámara fija, y la pelota ocupa apenas unos píxeles y a menudo sale borrosa. El objetivo era sacar datos útiles del partido con esa única vista, como la posición de los jugadores, la trayectoria de la pelota y los golpes de cada uno.",
         architecture: [
           { label: "Vídeo", detail: "Fotogramas leídos por lotes con OpenCV" },
           { label: "Jugadores", detail: "Detector YOLOv8 con identificadores de ByteTrack" },
@@ -136,7 +136,7 @@ export const es = {
           "Scripts de evaluación de la detección y el seguimiento frente a ground truth en formato YOLO o MOTChallenge.",
         ],
         limitations: [
-          "La calibración de la pista es manual: hay que seleccionar las cuatro esquinas para cada posición de cámara.",
+          "La calibración de la pista es manual y hay que seleccionar las cuatro esquinas para cada posición de cámara.",
           "La detección de la pelota es menos fiable con desenfoque de movimiento y oclusiones.",
           "La detección de golpes se basa en reglas, no en un modelo entrenado.",
         ],
@@ -165,7 +165,7 @@ export const es = {
       discipline: "Orquestación multiagente · Automatización del desarrollo",
       headline: "Una herramienta en Python que hace trabajar juntos a dos agentes de código con IA.",
       summary:
-        "Una herramienta en Python que pasa una tarea de desarrollo por dos agentes de código: Codex CLI planifica y revisa, Claude Code CLI implementa y Playwright comprueba el resultado en un navegador real antes de que Git haga el commit.",
+        "Una herramienta en Python que pasa una tarea de desarrollo por dos agentes de código. Codex CLI planifica y revisa, Claude Code CLI implementa y Playwright comprueba el resultado en un navegador real antes de que Git haga el commit.",
       status: { label: "V1 validada · V2 experimental" },
       cover: { kind: "Diagrama", caption: "Flujo de la V1 para una tarea lanzada por el usuario." },
       cardText: ["Planificar", "Implementar", "Probar", "Revisar", "Commit"],
@@ -199,7 +199,7 @@ export const es = {
           ["Control de versiones y vuelta atrás", "Git"],
         ],
         results: [
-          "La V1 completó tareas enteras en una app web de demostración con un solo comando: plan, código, tests, capturas, revisión, documentación y commit.",
+          "La V1 completó tareas enteras en una app web de demostración con un solo comando, desde el plan hasta el commit, con el código, los tests, las capturas, la revisión y la documentación.",
           "Los resultados rechazados se corrigieron automáticamente, sin copiar nada a mano.",
           "En una ejecución, un texto casi invisible pasó todos los tests, pero se detectó en la captura y se corrigió.",
         ],
@@ -225,7 +225,7 @@ export const es = {
       cardCover: {
         kind: "Foto ilustrativa",
         caption: "Terminal de contenedores de noche (Hamburgo). Foto ilustrativa, no una captura del proyecto.",
-        credit: { text: "Foto: «Container Terminal Burchardkai night» de mybroetchen, CC BY 2.0, vía Wikimedia Commons" },
+        credit: { text: "Foto «Container Terminal Burchardkai night» de mybroetchen, CC BY 2.0, vía Wikimedia Commons" },
       },
       cover: { kind: "Captura de pantalla", caption: "Vista de grafo de Airflow del DAG daily_logistics_pipeline (recortada)." },
       facts: [
@@ -257,8 +257,8 @@ export const es = {
           ["Ejecución", "Docker Compose"],
         ],
         results: [
-          "Ejecución de ejemplo con datos de prueba: 20 envíos, 42 % de puntualidad y 33,7 minutos de retraso medio en la llegada.",
-          "Ejecución ampliada con 500 filas: ninguna fila no válida, 171 alertas y la ruta de más riesgo identificada (Luxemburgo → Nancy).",
+          "En una ejecución de ejemplo con 20 envíos, la puntualidad fue del 42 % y el retraso medio en la llegada de 33,7 minutos.",
+          "En una ejecución más grande con 500 filas no hubo ninguna fila no válida, saltaron 171 alertas y se identificó la ruta con más riesgo (Luxemburgo → Nancy).",
         ],
         resultsNote: "Los datos de envíos y GPS son simulados.",
         limitations: [
@@ -267,7 +267,7 @@ export const es = {
         ],
         gallery: [
           { kind: "Captura de pantalla", caption: "DAG de la fase 1 con su historial de ejecuciones." },
-          { kind: "Captura de pantalla", caption: "DAG de la fase 2: extracción en paralelo, unión con GPS, ETA, control de calidad y resumen." },
+          { kind: "Captura de pantalla", caption: "DAG de la fase 2, con extracción en paralelo, unión con GPS, ETA, control de calidad y resumen." },
           { kind: "Captura de pantalla", caption: "Envíos procesados cargados en PostgreSQL." },
           { kind: "Captura de pantalla", caption: "Servicios de Airflow y PostgreSQL en Docker." },
         ],
@@ -289,12 +289,12 @@ export const es = {
       ],
       caseStudy: {
         problem:
-          "El objetivo era construir todo el recorrido, de los ficheros diarios en bruto a informes fiables, en una sola plataforma: con historial de dimensiones, una separación clara entre datos en bruto y limpios, y un pipeline orquestado.",
+          "El objetivo era construir todo el recorrido, de los ficheros diarios en bruto a informes fiables, en una sola plataforma, con historial de dimensiones, una separación clara entre datos en bruto y limpios, y un pipeline orquestado.",
         architecture: [
           { label: "Carga", detail: "Ficheros CSV de ventas diarios en el Lakehouse" },
           { label: "Bronze", detail: "Tabla de pedidos en bruto" },
           { label: "Silver", detail: "Pedidos limpios en tablas Delta (PySpark)" },
-          { label: "Gold", detail: "Esquema en estrella del Warehouse: tablas de hechos y dimensiones" },
+          { label: "Gold", detail: "Esquema en estrella del Warehouse, con tablas de hechos y dimensiones" },
           { label: "Modelo", detail: "Modelo semántico con medidas DAX" },
           { label: "Informe", detail: "Cuatro páginas de informe en Power BI" },
         ],
@@ -311,7 +311,7 @@ export const es = {
         ],
         results: [
           "El pipeline se ejecuta de principio a fin en Fabric, incluidas la ingesta, la transformación y las actualizaciones SCD.",
-          "Cuatro páginas de informe: resumen ejecutivo, rendimiento por canal y producto, explorador de ventas y análisis temporal.",
+          "Cuatro páginas de informe, con un resumen ejecutivo, el rendimiento por canal y producto, un explorador de ventas y un análisis temporal.",
         ],
         resultsNote: "Es una demostración construida con ficheros de ejemplo, no un despliegue en producción.",
         limitations: [
@@ -354,7 +354,7 @@ export const es = {
         implementation: [
           "Elegí pypdf tras comparar varias librerías de extracción de PDF y después construí la segmentación de cláusulas y un índice SQLite FTS5.",
           "La búsqueda combina palabras clave y embeddings locales, siempre limitada al contrato seleccionado.",
-          "Cada cita de una respuesta del modelo se comprueba: la cláusula tiene que estar entre las proporcionadas y el texto citado tiene que aparecer en ella. Sin una cita válida, la respuesta pasa a ser INSUFFICIENT_INFORMATION.",
+          "Cada cita de una respuesta del modelo se comprueba. La cláusula tiene que estar entre las proporcionadas y el texto citado tiene que aparecer en ella. Sin una cita válida, la respuesta pasa a ser INSUFFICIENT_INFORMATION.",
           "El backend es un servicio FastAPI con una interfaz en React en francés. Un proveedor local de Ollama solo acepta conexiones locales y comprueba la longitud de contexto del modelo tras cada llamada.",
         ],
         ownership: [
@@ -371,7 +371,7 @@ export const es = {
         limitations: [
           "Todavía no se envían documentos reales de aseguradoras a ningún modelo, por restricciones en el uso compartido de datos.",
           "El recall de la búsqueda tiene que mejorar.",
-          "No hay demo pública: la API se ejecuta en local y el contenido de las aseguradoras no se publica.",
+          "No hay demo pública, porque la API se ejecuta en local y el contenido de las aseguradoras no se publica.",
         ],
       },
     },
@@ -381,11 +381,11 @@ export const es = {
     "exp-sword": {
       period: "Abr. 2026 — actualidad",
       role: "Ingeniero de Datos e IA",
-      context: "Proyecto en cliente: EBTrans (logística)",
+      context: "Proyecto para EBTrans (logística)",
       summary:
         "Soy el responsable de la parte de automatización e IA de mi proyecto en EBTrans. Desarrollo herramientas en Python, flujos de integración de datos y aplicaciones de IA que mejoran los procesos internos y dan soporte a los equipos de negocio, y colaboro en tareas de reporting y de datos.",
       points: [
-        "Lidero las iniciativas de automatización e IA del proyecto: identifico casos de uso prácticos y construyo soluciones internas.",
+        "Lidero las iniciativas de automatización e IA del proyecto, identificando casos de uso prácticos y desarrollando soluciones internas.",
         "Desarrollo componentes en Python y SQL para integrar datos entre sistemas de negocio, con PostgreSQL, Talend y API REST.",
         "Construyo workflows en n8n para procesar documentos, hacer extracción estructurada con OCR y LLM, validar datos y automatizar procesos.",
         "Trabajo en aplicaciones de IA con LLM, RAG y agentes de IA para casos de uso internos.",
@@ -426,7 +426,7 @@ export const es = {
     {
       title: "Grado en Ingeniería Informática",
       org: "Universidad de Sevilla, España",
-      note: "Mención en Tecnologías de la Información. Trabajo de fin de grado: el Smart Voice Restaurant Assistant.",
+      note: "Mención en Tecnologías de la Información. Mi trabajo de fin de grado fue el Smart Voice Restaurant Assistant.",
     },
   ],
 
@@ -462,7 +462,7 @@ export const es = {
     { title: "Asistente de viajes VisAI", note: "Chatbot de viajes con LLM y API externas" },
     { note: "Anuncios de protectoras obtenidos por scraping, con búsqueda de texto completo" },
     { title: "Lector de documentos de identidad", note: "Extracción OCR de documentos de identidad franceses y británicos" },
-    { title: "Proyectos de redes neuronales", note: "Cinco ejercicios: CNN, aumento de datos y transfer learning" },
+    { title: "Proyectos de redes neuronales", note: "Cinco ejercicios sobre CNN, aumento de datos y transfer learning" },
     { note: "Pequeño juego arcade" },
     { title: "Análisis de sentimiento", note: "Análisis de sentimiento de reseñas de videojuegos" },
   ],

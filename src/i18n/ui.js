@@ -126,9 +126,9 @@ const en = {
 
 const fr = {
   meta: {
-    title: "Amine Bennani — Ingénieur logiciel & IA",
+    title: "Amine Bennani — Ingénieur Software et IA",
     description:
-      "Amine Bennani, ingénieur logiciel & IA au Luxembourg (MSc en intelligence artificielle, mention Distinction, Oxford Brookes). IA, automatisation et intégration de données, vision par ordinateur et systèmes autonomes.",
+      "Amine Bennani, ingénieur Software et IA au Luxembourg (MSc en intelligence artificielle, mention Distinction, Oxford Brookes). IA, automatisation et intégration de données, vision par ordinateur et systèmes autonomes.",
   },
   skip: "Aller au contenu",
   nav: {
@@ -144,11 +144,11 @@ const fr = {
     langNames: { en: "English", fr: "Français", es: "Español" },
   },
   hero: {
-    role: "Ingénieur logiciel & IA",
+    role: "Ingénieur Software et IA",
     paragraphs: [
-      "Je suis ingénieur logiciel et IA, basé au Luxembourg. Je travaille sur des projets d’IA, d’automatisation et d’intégration de données dans la logistique : chez Sword Group, je suis responsable du volet automatisation et IA de ma mission client.",
-      "J’ai étudié l’ingénierie informatique à l’Université de Séville, puis obtenu un MSc en intelligence artificielle avec mention Distinction à l’Oxford Brookes University. Mon parcours associe développement logiciel, vision par ordinateur et systèmes autonomes, notamment la perception pour une voiture autonome de Formula Student.",
-      "Je m’intéresse tout particulièrement à la robotique, au spatial et à l’IA appliquée. J’ai étudié et travaillé en Espagne, au Royaume-Uni et au Luxembourg ; je parle couramment français, espagnol et anglais, et j’ai un niveau conversationnel en arabe.",
+      "Je suis ingénieur Software et IA, basé au Luxembourg, et je travaille sur des projets d’IA, d’automatisation et d’intégration de données dans la logistique. Chez Sword Group, je suis responsable de la partie automatisation et IA de ma mission client.",
+      "J’ai étudié l’ingénierie informatique à l’Université de Séville et j’ai fait un MSc en intelligence artificielle à Oxford Brookes University, obtenu avec Distinction. Mon profil combine développement logiciel, vision par ordinateur et systèmes autonomes, avec notamment un travail sur la perception d’une voiture autonome de Formula Student.",
+      "Je m’intéresse surtout à la robotique, au spatial et à l’IA appliquée. J’ai étudié et travaillé en Espagne, au Royaume-Uni et au Luxembourg, et je parle couramment français, espagnol et anglais, ainsi que l’arabe à un niveau conversationnel.",
     ],
     projects: "Voir mes projets",
     contact: "Contact",
@@ -171,7 +171,7 @@ const fr = {
     privateRepoShort: "Dépôt privé",
     results: "Résultats",
     openCase: (title) => `Ouvrir l’étude de cas ${title}`,
-    repoFor: (title) => ` : dépôt de ${title} (nouvel onglet)`,
+    repoFor: (title) => `, dépôt de ${title} (nouvel onglet)`,
     techLabel: "Technologies",
   },
   caseStudy: {
@@ -195,7 +195,7 @@ const fr = {
   },
   skills: { usedIn: "Utilisé dans" },
   contact: {
-    intro: "Le plus simple pour me joindre, c’est par e-mail. Vous me trouverez aussi sur LinkedIn et GitHub.",
+    intro: "Le plus simple pour me contacter, c’est par e-mail. Je suis aussi sur LinkedIn et GitHub.",
     copy: "Copier",
     copied: "Copié",
     copiedLive: "Adresse e-mail copiée dans le presse-papiers",
@@ -217,7 +217,7 @@ const fr = {
   diagrams: {
     council: {
       title:
-        "Flux d’AI Council V1 : une tâche lancée par l’utilisateur est planifiée par Codex CLI, réalisée par Claude Code CLI, vérifiée par des tests et des captures Playwright, relue par Codex CLI, puis commitée avec Git ou renvoyée avec des retours.",
+        "Dans la V1 d’AI Council, une tâche lancée par l’utilisateur est planifiée par Codex CLI, réalisée par Claude Code CLI, vérifiée par des tests et des captures Playwright, relue par Codex CLI, puis commitée avec Git ou renvoyée avec des retours.",
       nodes: [
         ["01 · UTILISATEUR", "Une tâche", "lancée en ligne de commande"],
         ["02 · PLAN", "Codex CLI", "planifie, ne modifie rien"],
@@ -232,7 +232,7 @@ const fr = {
     },
     clair: {
       title:
-        "Pipeline de ClairSinistre : PDF publics d’assureurs vérifiés par empreinte, extraction et segmentation des clauses, index local par mots-clés et sémantique, recherche limitée au contrat, réponse du modèle validée par un schéma, puis contrôle des citations et règles d’abstention, le tout en local.",
+        "Le pipeline de ClairSinistre comprend des PDF publics d’assureurs vérifiés par empreinte, extraction et segmentation des clauses, index local par mots-clés et sémantique, recherche limitée au contrat, réponse du modèle validée par un schéma, puis contrôle des citations et règles d’abstention, le tout en local.",
       boundary: "LOCAL UNIQUEMENT · API EN LOOPBACK · NON DÉPLOYÉ",
       nodes: [
         ["01 · CORPUS", "PDF d’assureurs", "URL officielles, SHA-256"],
@@ -269,9 +269,9 @@ const es = {
   hero: {
     role: "Ingeniero de software e IA",
     paragraphs: [
-      "Soy ingeniero de software e IA y vivo en Luxemburgo. Trabajo en proyectos de IA, automatización e integración de datos en el sector logístico: en Sword Group soy el responsable de la parte de automatización e IA de mi proyecto en cliente.",
-      "Estudié Ingeniería Informática en la Universidad de Sevilla y completé un MSc en Inteligencia Artificial con Distinction en Oxford Brookes University. Mi perfil combina desarrollo de software, visión por computador y sistemas autónomos, incluido el trabajo de percepción para un coche autónomo de Formula Student.",
-      "Me interesan especialmente la robótica, el sector espacial y la IA aplicada. He estudiado y trabajado en España, Reino Unido y Luxemburgo, y hablo francés, español e inglés con fluidez, además de árabe a nivel conversacional.",
+      "Soy ingeniero de software e IA, vivo en Luxemburgo y trabajo en proyectos de IA, automatización e integración de datos en logística. En Sword Group soy responsable de la parte de automatización e IA de mi proyecto en cliente.",
+      "Estudié Ingeniería Informática en la Universidad de Sevilla e hice un MSc en Inteligencia Artificial en Oxford Brookes University, que terminé con Distinction. Mi perfil combina desarrollo de software, visión por computador y sistemas autónomos, incluido trabajo de percepción para un coche autónomo de Formula Student.",
+      "Me interesan sobre todo la robótica, el espacio y la IA aplicada. He estudiado y trabajado en España, Reino Unido y Luxemburgo, y hablo francés, español e inglés con fluidez, además de árabe a nivel conversacional.",
     ],
     projects: "Ver mis proyectos",
     contact: "Contacto",
@@ -294,7 +294,7 @@ const es = {
     privateRepoShort: "Repo privado",
     results: "Resultados",
     openCase: (title) => `Abrir el caso de estudio de ${title}`,
-    repoFor: (title) => `: repositorio de ${title} (se abre en otra pestaña)`,
+    repoFor: (title) => `, repositorio de ${title} (se abre en otra pestaña)`,
     techLabel: "Tecnologías",
   },
   caseStudy: {
@@ -340,7 +340,7 @@ const es = {
   diagrams: {
     council: {
       title:
-        "Flujo de AI Council V1: una tarea lanzada por el usuario la planifica Codex CLI, la implementa Claude Code CLI, se verifica con tests y capturas de Playwright, la revisa Codex CLI y después se hace commit con Git o vuelve con comentarios.",
+        "En la V1 de AI Council, una tarea lanzada por el usuario la planifica Codex CLI, la implementa Claude Code CLI, se verifica con tests y capturas de Playwright, la revisa Codex CLI y después se hace commit con Git o vuelve con comentarios.",
       nodes: [
         ["01 · USUARIO", "Una tarea", "lanzada desde la CLI"],
         ["02 · PLAN", "Codex CLI", "planifica, no modifica nada"],
@@ -355,7 +355,7 @@ const es = {
     },
     clair: {
       title:
-        "Pipeline de ClairSinistre: PDF públicos de aseguradoras verificados por hash, extracción y segmentación de cláusulas, índice local por palabras clave y semántico, búsqueda limitada al contrato, respuesta del modelo validada con un esquema y, por último, comprobación de citas y reglas de abstención, todo en local.",
+        "El pipeline de ClairSinistre incluye PDF públicos de aseguradoras verificados por hash, extracción y segmentación de cláusulas, índice local por palabras clave y semántico, búsqueda limitada al contrato, respuesta del modelo validada con un esquema y, por último, comprobación de citas y reglas de abstención, todo en local.",
       boundary: "SOLO EN LOCAL · API EN LOOPBACK · SIN DESPLEGAR",
       nodes: [
         ["01 · CORPUS", "PDF de aseguradoras", "URL oficiales, SHA-256"],

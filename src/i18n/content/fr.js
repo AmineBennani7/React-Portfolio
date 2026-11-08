@@ -70,10 +70,10 @@ export const fr = {
           ["Tableau de bord et cartes", "Streamlit, Folium, Altair"],
         ],
         results: [
-          "Sur les données de flotte d’exemple : 2 046 enregistrements lus, 2 031 valides (99,3 %) et 15 rejetés, chacun avec son motif.",
+          "Sur les données de flotte d’exemple, 2 046 enregistrements ont été lus, dont 2 031 valides (99,3 %) et 15 rejetés, chacun avec son motif.",
           "4 trajectoires, 34,0 km, 11 arrêts et 15 trajets détectés.",
-          "Le même itinéraire parcouru deux jours différents est très proche : Hausdorff 13,8 m, Fréchet 13,9 m, recouvrement de 100 %.",
-          "Le tronçon volontairement rapide a été détecté : 7 points entre 72 et 84 km/h.",
+          "Le même itinéraire fait deux jours différents correspond presque parfaitement, avec une distance de Hausdorff de 13,8 m, une distance de Fréchet de 13,9 m et un recouvrement de 100 %.",
+          "Le tronçon rapide ajouté exprès a bien été détecté, avec 7 points entre 72 et 84 km/h.",
         ],
         resultsNote: "Ces résultats proviennent de données d’exemple synthétiques, avec des erreurs ajoutées volontairement.",
         limitations: [
@@ -83,7 +83,7 @@ export const fr = {
         ],
         gallery: [
           { kind: "Capture d’écran", caption: "Trace brute (en pointillés) et trace nettoyée. La ligne qui sort de la carte est un saut GPS ; les cercles blancs sont des points peu précis." },
-          { kind: "Capture d’écran", caption: "Onglet qualité des données : enregistrements rejetés par motif et distance à chaque étape du nettoyage." },
+          { kind: "Capture d’écran", caption: "Onglet qualité des données, avec les enregistrements rejetés par motif et la distance à chaque étape du nettoyage." },
           { kind: "Capture d’écran", caption: "Événements de géorepérage et temps passé dans chaque zone." },
           { kind: "Capture d’écran", caption: "Profils de vitesse et d’accélération." },
         ],
@@ -94,11 +94,11 @@ export const fr = {
       discipline: "Vision par ordinateur · Mémoire de MSc",
       headline: "Suivi des joueurs et de la balle dans des vidéos de tennis amateur.",
       summary:
-        "Mon mémoire de MSc : un pipeline qui suit les joueurs avec YOLOv8 et ByteTrack et une balle petite et rapide avec GridTrackNet, projette le tout sur le court grâce à une homographie, et produit une vidéo annotée avec mini-carte et nombre de frappes.",
+        "C’est mon mémoire de MSc, un pipeline qui suit les joueurs avec YOLOv8 et ByteTrack et une balle petite et rapide avec GridTrackNet, projette le tout sur le court grâce à une homographie, et produit une vidéo annotée avec mini-carte et nombre de frappes.",
       status: { label: "Terminé" },
       cover: {
         kind: "Sortie du système",
-        caption: "Sortie du système : joueurs suivis avec leur identifiant, position de la balle, compteurs de frappes et vue du court de dessus (en haut à droite).",
+        caption: "Sortie du système, avec les joueurs suivis et leur identifiant, la position de la balle, les compteurs de frappes et une vue du court de dessus (en haut à droite).",
       },
       facts: [
         ["Joueurs", "YOLOv8 + ByteTrack"],
@@ -108,7 +108,7 @@ export const fr = {
       ],
       caseStudy: {
         problem:
-          "C’était mon projet de mémoire de MSc à Oxford Brookes. L’analyse du tennis professionnel s’appuie sur plusieurs caméras calibrées. Les matchs amateurs sont généralement filmés avec une seule caméra fixe, et la balle ne fait que quelques pixels et apparaît souvent floue. L’objectif était d’extraire des données de match utiles de cette seule vue : position des joueurs, trajectoire de la balle et frappes par joueur.",
+          "C’était mon projet de mémoire de MSc à Oxford Brookes. L’analyse du tennis professionnel s’appuie sur plusieurs caméras calibrées. Les matchs amateurs sont généralement filmés avec une seule caméra fixe, et la balle ne fait que quelques pixels et apparaît souvent floue. L’objectif était d’extraire des données de match utiles de cette seule vue, comme la position des joueurs, la trajectoire de la balle et les frappes de chaque joueur.",
         architecture: [
           { label: "Vidéo", detail: "Images lues par lots avec OpenCV" },
           { label: "Joueurs", detail: "Détecteur YOLOv8 avec identifiants ByteTrack" },
@@ -136,7 +136,7 @@ export const fr = {
           "Des scripts d’évaluation de la détection et du suivi par rapport à une vérité terrain au format YOLO ou MOTChallenge.",
         ],
         limitations: [
-          "La calibration du court est manuelle : les quatre coins sont sélectionnés pour chaque position de caméra.",
+          "La calibration du court est manuelle, il faut sélectionner les quatre coins pour chaque position de caméra.",
           "La détection de la balle est moins fiable en cas de flou de mouvement et d’occultation.",
           "La détection des frappes repose sur des règles, pas sur un modèle entraîné.",
         ],
@@ -165,7 +165,7 @@ export const fr = {
       discipline: "Orchestration multi-agents · Automatisation du développement",
       headline: "Un outil Python qui fait travailler ensemble deux agents de code IA.",
       summary:
-        "Un outil Python qui fait passer une tâche de développement par deux agents de code : Codex CLI planifie et relit, Claude Code CLI implémente, et Playwright vérifie le résultat dans un vrai navigateur avant que Git ne le commite.",
+        "Un outil Python qui fait passer une tâche de développement par deux agents de code. Codex CLI planifie et relit, Claude Code CLI implémente et Playwright vérifie le résultat dans un vrai navigateur avant que Git ne le commite.",
       status: { label: "V1 validée · V2 expérimentale" },
       cover: { kind: "Schéma", caption: "Flux de la V1 pour une tâche lancée par l’utilisateur." },
       cardText: ["Planifier", "Construire", "Tester", "Relire", "Commiter"],
@@ -199,7 +199,7 @@ export const fr = {
           ["Versionnage et retour arrière", "Git"],
         ],
         results: [
-          "La V1 a mené des tâches complètes sur une application web de démonstration en une seule commande : plan, code, tests, captures, revue, documentation et commit.",
+          "La V1 a mené des tâches complètes sur une application web de démonstration en une seule commande, du plan jusqu’au commit, avec le code, les tests, les captures, la revue et la documentation.",
           "Les résultats refusés ont été corrigés automatiquement, sans rien recopier à la main.",
           "Lors d’une exécution, un texte presque invisible a passé tous les tests mais a été repéré sur la capture, puis corrigé.",
         ],
@@ -225,7 +225,7 @@ export const fr = {
       cardCover: {
         kind: "Photo d’illustration",
         caption: "Terminal à conteneurs de nuit (Hambourg). Photo d’illustration, pas une capture du projet.",
-        credit: { text: "Photo : « Container Terminal Burchardkai night » par mybroetchen, CC BY 2.0, via Wikimedia Commons" },
+        credit: { text: "Photo « Container Terminal Burchardkai night » de mybroetchen, CC BY 2.0, via Wikimedia Commons" },
       },
       cover: { kind: "Capture d’écran", caption: "Vue graphe d’Airflow du DAG daily_logistics_pipeline (recadrée)." },
       facts: [
@@ -257,8 +257,8 @@ export const fr = {
           ["Exécution", "Docker Compose"],
         ],
         results: [
-          "Exécution d’exemple sur des données de test : 20 expéditions, 42 % de ponctualité, 33,7 minutes de retard moyen à l’arrivée.",
-          "Exécution étendue sur 500 lignes : aucune ligne invalide, 171 alertes et l’itinéraire le plus à risque identifié (Luxembourg → Nancy).",
+          "Sur une exécution d’exemple avec 20 expéditions, le taux de ponctualité est de 42 % et le retard moyen à l’arrivée de 33,7 minutes.",
+          "Sur une exécution plus large de 500 lignes, aucune ligne n’était invalide, 171 alertes ont été levées et l’itinéraire le plus à risque a été identifié (Luxembourg → Nancy).",
         ],
         resultsNote: "Les données d’expédition et GPS sont simulées.",
         limitations: [
@@ -267,7 +267,7 @@ export const fr = {
         ],
         gallery: [
           { kind: "Capture d’écran", caption: "DAG de la phase 1 avec son historique d’exécution." },
-          { kind: "Capture d’écran", caption: "DAG de la phase 2 : extraction en parallèle, fusion GPS, ETA, contrôle qualité et résumé." },
+          { kind: "Capture d’écran", caption: "DAG de la phase 2, avec extraction en parallèle, fusion GPS, ETA, contrôle qualité et résumé." },
           { kind: "Capture d’écran", caption: "Expéditions traitées chargées dans PostgreSQL." },
           { kind: "Capture d’écran", caption: "Services Airflow et PostgreSQL sous Docker." },
         ],
@@ -294,7 +294,7 @@ export const fr = {
           { label: "Chargement", detail: "Fichiers CSV de ventes quotidiens dans le Lakehouse" },
           { label: "Bronze", detail: "Table des commandes brutes" },
           { label: "Silver", detail: "Commandes nettoyées en tables Delta (PySpark)" },
-          { label: "Gold", detail: "Schéma en étoile du Warehouse : tables de faits et de dimensions" },
+          { label: "Gold", detail: "Schéma en étoile du Warehouse, avec tables de faits et de dimensions" },
           { label: "Modèle", detail: "Modèle sémantique avec mesures DAX" },
           { label: "Rapport", detail: "Quatre pages de rapport Power BI" },
         ],
@@ -311,7 +311,7 @@ export const fr = {
         ],
         results: [
           "Le pipeline s’exécute de bout en bout dans Fabric, ingestion, transformation et mises à jour SCD comprises.",
-          "Quatre pages de rapport : synthèse, performance par canal et par produit, explorateur des ventes et analyse temporelle.",
+          "Quatre pages de rapport, avec une synthèse, la performance par canal et par produit, un explorateur des ventes et une analyse temporelle.",
         ],
         resultsNote: "C’est une démonstration construite sur des fichiers d’exemple, pas un déploiement en production.",
         limitations: [
@@ -354,7 +354,7 @@ export const fr = {
         implementation: [
           "J’ai choisi pypdf après avoir comparé plusieurs bibliothèques d’extraction de PDF, puis construit la segmentation des clauses et un index SQLite FTS5.",
           "La recherche combine mots-clés et embeddings locaux, et reste toujours limitée au contrat sélectionné.",
-          "Chaque citation d’une réponse du modèle est vérifiée : la clause doit faire partie de celles fournies, et le texte cité doit y figurer. Sans citation valide, la réponse devient INSUFFICIENT_INFORMATION.",
+          "Chaque citation d’une réponse du modèle est vérifiée. La clause doit faire partie de celles fournies, et le texte cité doit y figurer. Sans citation valide, la réponse devient INSUFFICIENT_INFORMATION.",
           "Le backend est un service FastAPI avec une interface React en français. Un fournisseur Ollama local n’accepte que les connexions locales et vérifie la longueur de contexte du modèle après chaque appel.",
         ],
         ownership: [
@@ -371,7 +371,7 @@ export const fr = {
         limitations: [
           "Les vrais documents d’assureurs ne sont encore envoyés à aucun modèle, en raison de contraintes de partage des données.",
           "Le rappel de la recherche doit encore progresser.",
-          "Pas de démo publique : l’API tourne en local et le contenu des assureurs n’est pas publié.",
+          "Il n’y a pas de démo publique, car l’API tourne en local et le contenu des assureurs n’est pas publié.",
         ],
       },
     },
@@ -381,11 +381,11 @@ export const fr = {
     "exp-sword": {
       period: "Avr. 2026 — aujourd’hui",
       role: "Ingénieur Data & IA",
-      context: "Mission client : EBTrans (logistique)",
+      context: "Mission chez EBTrans (logistique)",
       summary:
         "Je suis responsable du volet automatisation et IA de ma mission chez EBTrans. Je développe des outils Python, des flux d’intégration de données et des applications d’IA qui améliorent les processus internes et soutiennent les équipes métier, et je contribue au reporting et aux sujets liés aux données.",
       points: [
-        "Je pilote les initiatives d’automatisation et d’IA de la mission : j’identifie des cas d’usage concrets et je construis des solutions internes.",
+        "Je pilote les initiatives d’automatisation et d’IA de la mission, en identifiant des cas d’usage concrets et en construisant des solutions internes.",
         "Je développe des composants Python et SQL pour l’intégration de données entre systèmes métier, avec PostgreSQL, Talend et des API REST.",
         "Je construis des workflows n8n pour le traitement de documents, l’extraction structurée avec OCR et LLM, la validation et l’automatisation de processus.",
         "Je travaille sur des applications d’IA à base de LLM, de RAG et d’agents IA pour des cas d’usage internes.",
@@ -426,7 +426,7 @@ export const fr = {
     {
       title: "Grado (licence) en ingénierie informatique",
       org: "Université de Séville, Espagne",
-      note: "Spécialité technologies de l’information. Projet de fin d’études : le Smart Voice Restaurant Assistant.",
+      note: "Spécialité technologies de l’information. Mon projet de fin d’études était le Smart Voice Restaurant Assistant.",
     },
   ],
 
@@ -462,7 +462,7 @@ export const fr = {
     { title: "Assistant de voyage VisAI", note: "Chatbot de voyage avec LLM et API externes" },
     { note: "Annonces de refuges collectées par scraping, avec recherche plein texte" },
     { title: "Lecteur de pièces d’identité", note: "Extraction OCR de pièces d’identité françaises et britanniques" },
-    { title: "Projets de réseaux de neurones", note: "Cinq exercices : CNN, augmentation de données, transfer learning" },
+    { title: "Projets de réseaux de neurones", note: "Cinq exercices sur les CNN, l’augmentation de données et le transfer learning" },
     { note: "Petit jeu d’arcade" },
     { title: "Analyse de sentiments", note: "Analyse de sentiments d’avis sur des jeux vidéo" },
   ],
